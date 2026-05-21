@@ -345,6 +345,127 @@
             color: var(--ink-3);
             letter-spacing: .02em
         }
+
+        .intro-layout {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            grid-template-columns: 620px 1fr;
+            gap: 76px;
+            align-items: center;
+            padding: 132px 120px 84px
+        }
+
+        .profile-photo {
+            width: 520px;
+            height: 640px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 16px;
+            border: 1.5px solid var(--rule)
+        }
+
+        .intro-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 24px;
+            margin-top: 36px
+        }
+
+        .intro-list li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            font-size: 22px;
+            line-height: 1.45;
+            color: var(--ink-2)
+        }
+
+        .intro-list li::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--orange);
+            margin-top: 14px;
+            flex: 0 0 auto
+        }
+
+        .qr-card {
+            margin-top: 36px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            width: max-content;
+            border: 1.5px solid var(--rule);
+            border-radius: 16px;
+            padding: 22px 28px;
+            background: white
+        }
+
+        .qr-card img {
+            width: 132px;
+            height: 132px;
+            display: block
+        }
+
+        .image-test-layout {
+            position: absolute;
+            inset: 0;
+            padding: 118px 80px 72px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px
+        }
+
+        .image-test-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 48px
+        }
+
+        .image-test-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            flex: 1;
+            min-height: 0
+        }
+
+        .image-choice {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1.5px solid var(--rule);
+            background: var(--navy)
+        }
+
+        .image-choice img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover
+        }
+
+        .choice-badge {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            width: 58px;
+            height: 58px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-d);
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            background: rgba(0, 0, 0, .62);
+            border: 1px solid rgba(255, 255, 255, .22)
+        }
     </style>
 </head>
 
@@ -365,7 +486,68 @@
                 <p class="body-l white-m" style="margin-top:44px;max-width:760px">A practical pitch for business owners
                     who want AI to create business movement, not just experiments.</p>
             </div>
-            <div class="pg pg-light">01 / 18</div>
+            <div class="pg pg-light">01 / 20</div>
+        </section>
+
+        <!-- 02 - Self Introduction -->
+        <section id="s-intro">
+            <div class="logo"><span class="alt">alt</span>SHIFT</div>
+            <div class="intro-layout">
+                <div>
+                    <img class="profile-photo" src="images/profilepic.jpg" alt="Ts. Chong Theng Hui">
+                </div>
+                <div>
+                    <div class="lbl lbl-orange" style="margin-bottom:24px">Speaker introduction</div>
+                    <h2 class="t-xl">Ts. Chong<br>Theng Hui</h2>
+                    <p class="body-l" style="margin-top:24px;max-width:760px">AI transformation, digital product, and
+                        enterprise architecture practitioner.</p>
+                    <ul class="intro-list">
+                        <li>First class degree holder</li>
+                        <li>Bachelor of Computer Sc in Artificial Intelligence, Universiti Malaya</li>
+                        <li>20+ years in AI, Digital Product &amp; Architecture</li>
+                        <li>Former Solution Consultant in APAC region</li>
+                        <li>Former Head of AI in Highway Corporate</li>
+                        <li>CTO & AI Practitioner in current position</li>
+                        <li>Professional Technologist (Ts.)</li>
+                        <li>Advisory Panel of National AI Office (NAIO)</li>
+                        <li>HRDC Accredited Trainer</li>
+                    </ul>
+                    <div class="qr-card" style="width:350px">
+                        <img src="images/linkedin-qr.svg" alt="LinkedIn QR code">
+                        <div>
+                            <div class="lbl lbl-blue" style="margin-bottom:10px">Connect</div>
+                            <p class="body-m">Scan to connect with me on LinkedIn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pg">02 / 20</div>
+        </section>
+
+        <!-- 03 - Real Or AI -->
+        <section id="s-real-ai">
+            <div class="logo"><span class="alt">alt</span>SHIFT</div>
+            <div class="image-test-layout">
+                <div class="image-test-head">
+                    <div>
+                        <div class="lbl lbl-orange" style="margin-bottom:18px">Audience warm-up</div>
+                        <h2 class="t-lg">Which image is real?</h2>
+                    </div>
+                    <p class="body-l" style="max-width:620px;text-align:right">One is a real photo. One is AI-generated.
+                        Pick A or B.</p>
+                </div>
+                <div class="image-test-grid">
+                    <div class="image-choice">
+                        <img src="images/whichreal_img1.png" alt="Mountain landscape option A">
+                        <div class="choice-badge">A</div>
+                    </div>
+                    <div class="image-choice">
+                        <img src="images/whichreal_img2.png" alt="Mountain landscape option B">
+                        <div class="choice-badge">B</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pg">03 / 20</div>
         </section>
 
         <!-- 02 - Main Message -->
@@ -377,7 +559,7 @@
                 <div style="width:56px;height:4px;background:var(--orange);border-radius:2px;margin:48px auto"></div>
                 <h2 class="t-xl blue">A well-designed AI workflow<br>can change your speed, cost, and growth.</h2>
             </div>
-            <div class="pg">02 / 18</div>
+            <div class="pg">04 / 20</div>
         </section>
 
         <!-- 03 - Wrong Question -->
@@ -393,7 +575,7 @@
                 </div>
                 <h2 class="t-lg blue">"Which part of my business should stop<br>depending on manual effort?"</h2>
             </div>
-            <div class="pg">03 / 18</div>
+            <div class="pg">05 / 20</div>
         </section>
 
         <!-- 04 - Opportunity -->
@@ -418,7 +600,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg pg-light">04 / 18</div>
+            <div class="pg pg-light">06 / 20</div>
         </section>
 
         <!-- 05 - Roadblock -->
@@ -431,7 +613,7 @@
                 <p class="body-l" style="margin-top:44px;max-width:980px">Business wants progress. IT wants stability.
                     Both are right.</p>
             </div>
-            <div class="pg">05 / 18</div>
+            <div class="pg">07 / 20</div>
         </section>
 
         <!-- 06 - Stalled Innovation -->
@@ -458,7 +640,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg">06 / 18</div>
+            <div class="pg">08 / 20</div>
         </section>
 
         <!-- 07 - Missing Layer -->
@@ -487,7 +669,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg">07 / 18</div>
+            <div class="pg">09 / 20</div>
         </section>
 
         <!-- 08 - Bridge -->
@@ -510,7 +692,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg pg-light">08 / 18</div>
+            <div class="pg pg-light">10 / 20</div>
         </section>
 
         <!-- 09 - Before Code -->
@@ -540,7 +722,7 @@
                 <p class="t-sm blue" style="margin-top:64px;text-align:center">Start small. Show progress. Build
                     momentum.</p>
             </div>
-            <div class="pg">09 / 18</div>
+            <div class="pg">11 / 20</div>
         </section>
 
         <!-- 10 - What I Sell -->
@@ -564,7 +746,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg">10 / 18</div>
+            <div class="pg">12 / 20</div>
         </section>
 
         <!-- 11 - Collaborator -->
@@ -585,7 +767,7 @@
                 </div>
                 <p class="t-sm blue" style="margin-top:56px">That is where business leverage begins.</p>
             </div>
-            <div class="pg">11 / 18</div>
+            <div class="pg">13 / 20</div>
         </section>
 
         <!-- 12 - Harness -->
@@ -615,7 +797,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg pg-light">12 / 18</div>
+            <div class="pg pg-light">14 / 20</div>
         </section>
 
         <!-- 13 - ROI -->
@@ -651,7 +833,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg">13 / 18</div>
+            <div class="pg">15 / 20</div>
         </section>
 
         <!-- 14 - Use Cases -->
@@ -683,7 +865,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg">14 / 18</div>
+            <div class="pg">16 / 20</div>
         </section>
 
         <!-- 15 - 30 Day Move -->
@@ -713,7 +895,7 @@
                 <p class="t-sm" style="margin-top:64px;text-align:center">Small win first. <span class="blue">Business
                         confidence next.</span></p>
             </div>
-            <div class="pg">15 / 18</div>
+            <div class="pg">17 / 20</div>
         </section>
 
         <!-- 16 - Engagement -->
@@ -739,7 +921,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg">16 / 18</div>
+            <div class="pg">18 / 20</div>
         </section>
 
         <!-- 17 - Belief -->
@@ -754,7 +936,7 @@
                 <h2 class="t-xl white">It is about removing low-value work,<br>so your people can do <span
                         class="blue">higher-value work.</span></h2>
             </div>
-            <div class="pg pg-light">17 / 18</div>
+            <div class="pg pg-light">19 / 20</div>
         </section>
 
         <!-- 18 - CTA -->
@@ -778,13 +960,14 @@
                     <div class="col" style="align-items:center;justify-content:center">
                         <div
                             style="font-family:var(--font-d);font-size:80px;font-weight:700;letter-spacing:-.035em;color:white;line-height:1">
-                            <span style="font-weight:300;color:rgba(255,255,255,.3)">alt</span>SHIFT</div>
+                            <span style="font-weight:300;color:rgba(255,255,255,.3)">alt</span>SHIFT
+                        </div>
                         <p class="mini" style="margin-top:20px;color:rgba(255,255,255,.35)">FROM EDUCATION TO EXECUTION
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="pg pg-light">18 / 18</div>
+            <div class="pg pg-light">20 / 20</div>
         </section>
 
     </deck-stage>
