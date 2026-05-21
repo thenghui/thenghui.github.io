@@ -269,6 +269,61 @@
             justify-content: center
         }
 
+        #s20 .vc {
+            padding: 0 120px 160px
+        }
+
+        #s20 .client-logo-banner {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 168px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            padding: 20px 120px 42px;
+            box-shadow: 0 -1px 0 rgba(255, 255, 255, .08)
+        }
+
+        #s20 .client-logo-title {
+            font-family: var(--font-d);
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--ink-3)
+        }
+
+        #s20 .client-logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 36px;
+            width: 100%
+        }
+
+        #s20 .client-logo-banner img {
+            max-width: 128px;
+            max-height: 52px;
+            object-fit: contain;
+            display: block
+        }
+
+        #s20 .client-logo-banner img.square-logo {
+            max-width: 58px;
+            max-height: 58px
+        }
+
+        #s20 .pg {
+            color: var(--ink-3);
+            bottom: 22px;
+            z-index: 2
+        }
+
         .row {
             display: flex;
             align-items: center
@@ -1008,6 +1063,21 @@
                         <p class="body-l white"><span class="orange">Book an AI Bottleneck Scan</span> with altSHIFT.
                         </p>
                     </div>
+                </div>
+            </div>
+            <div class="client-logo-banner" aria-label="Trained clients">
+                <div class="client-logo-title">Trained clients</div>
+                <div class="client-logo-row">
+                    <img src="images/client/asian%20pac.png" alt="Asian Pac">
+                    <img src="images/client/greenpacket.png" alt="Green Packet">
+                    <img src="images/client/hiredly.png" alt="Hiredly">
+                    <img src="images/client/nawawi.png" alt="Nawawi">
+                    <img src="images/client/pac.png" alt="PAC">
+                    <img src="images/client/plus.png" alt="PLUS">
+                    <img class="square-logo" src="images/client/pmg.png" alt="PMG">
+                    <img src="images/client/teras.png" alt="Teras">
+                    <img src="images/client/tng.png" alt="Touch 'n Go">
+                    <img src="images/client/verity.png" alt="Verity">
                 </div>
             </div>
             <div class="pg pg-light">21 / 21</div>
