@@ -324,6 +324,22 @@
             z-index: 2
         }
 
+        #s11 .collab-visual {
+            position: absolute;
+            right: 128px;
+            bottom: 112px;
+            width: 520px;
+            height: 374px;
+            pointer-events: none
+        }
+
+        #s11 .collab-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block
+        }
+
         .row {
             display: flex;
             align-items: center
@@ -621,7 +637,7 @@
             <div class="image-test-layout">
                 <div class="image-test-head">
                     <div>
-                        <div class="lbl lbl-orange" style="margin-bottom:18px">Audience warm-up</div>
+                        <div class="lbl lbl-orange" style="margin-bottom:18px">Warm-up</div>
                         <h2 class="t-lg">Which image is real?</h2>
                     </div>
                     <p class="body-l" style="max-width:620px;text-align:right">One is a real photo. One is AI-generated.
@@ -849,6 +865,9 @@
                     </div>
                 </div>
                 <p class="t-sm blue" style="margin-top:56px">That is where business leverage begins.</p>
+            </div>
+            <div class="collab-visual" aria-hidden="true">
+                <img src="images/openclaw-catch-claude.webp" alt="">
             </div>
             <div class="pg">14 / 21</div>
         </section>
