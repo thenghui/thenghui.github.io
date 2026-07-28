@@ -1,0 +1,17 @@
+flowchart TD
+    classDef step fill:#ffffff,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef poc fill:#9fbbe0,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef brain fill:#9fc9a2,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef decision fill:#26251e,stroke:#26251e,stroke-width:1px,color:#f7f7f4,rx:8px,ry:8px
+    classDef session fill:#f54e00,stroke:#d04200,stroke-width:1px,color:#ffffff,rx:8px,ry:8px
+
+    subgraph Row1 [" "]
+        direction LR
+        A["1. Idea"]:::step --> B["2. PRD<br/>(refine with AI)"]:::step --> C["3. AI Studio<br/>PoC mockup"]:::poc --> D["4. Export scaffold<br/>+ Design.md"]:::poc --> E["5. Write _DOCS<br/>into Brain"]:::brain
+    end
+    subgraph Row2 [" "]
+        direction LR
+        F["6. Coding Agent<br/>development"]:::step --> G["7. Test<br/>validation"]:::step --> H["8. Update<br/>CurrentStatus.md"]:::brain --> I{"Module<br/>complete?"}:::decision --> J["9. New Session<br/>(clear workspace)"]:::session
+    end
+    E --> F
+    I -- "no" --> F

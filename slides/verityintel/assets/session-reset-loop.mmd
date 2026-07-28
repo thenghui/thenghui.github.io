@@ -1,0 +1,15 @@
+flowchart TD
+    classDef step fill:#ffffff,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef status fill:#9fc9a2,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef close fill:#c0a8dd,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef new fill:#f54e00,stroke:#d04200,stroke-width:1px,color:#ffffff,rx:8px,ry:8px
+
+    subgraph Row1 [" "]
+        direction LR
+        A["Complete module"]:::step --> B["1. Update CurrentStatus.md<br/>(persist progress + rationale)"]:::status --> C["2. Close current session<br/>(flush O(N²) overhead)"]:::close
+    end
+    subgraph Row2 [" "]
+        direction LR
+        D["3. Open NEW SESSION<br/>(clean context)"]:::new --> E["4. Load CurrentStatus.md<br/>to start next task"]:::step
+    end
+    C --> D

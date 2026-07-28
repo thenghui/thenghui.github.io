@@ -1,0 +1,19 @@
+{
+  "theme": "base",
+  "themeVariables": {
+    "background": "#f7f7f4",
+    "fontFamily": "'JetBrains Mono', 'Space Mono', monospace",
+    "fontSize": "16px",
+    "primaryColor": "#ffffff",
+    "primaryTextColor": "#26251e",
+    "primaryBorderColor": "#26251e",
+    "lineColor": "#26251e",
+    "secondaryColor": "#fafaf7",
+    "tertiaryColor": "#ffffff",
+    "nodeBorder": "#26251e"
+  },
+  "flowchart": {
+    "curve": "basis",
+    "padding": 16
+  }
+}

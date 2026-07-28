@@ -1,0 +1,13 @@
+flowchart TD
+    classDef step fill:#ffffff,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef key fill:#9fc9a2,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+
+    subgraph Row1 [" "]
+        direction LR
+        A1["1. Error"]:::step --> A2["2. Reproduce"]:::step --> A3["3. Collect context"]:::step --> A4["4. AI generates hypotheses"]:::key
+    end
+    subgraph Row2 [" "]
+        direction LR
+        A5["5. Engineer verifies"]:::step --> A6["6. Apply fix"]:::step --> A7["7. Document / update Brain"]:::key
+    end
+    A4 --> A5

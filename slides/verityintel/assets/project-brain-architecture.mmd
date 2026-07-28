@@ -1,0 +1,32 @@
+graph TD
+    classDef agent fill:#26251e,stroke:#26251e,stroke-width:1px,color:#f7f7f4,rx:8px,ry:8px
+    classDef prompt fill:#ffffff,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef docs fill:#9fc9a2,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+    classDef task fill:#c0a8dd,stroke:#26251e,stroke-width:1px,color:#26251e,rx:8px,ry:8px
+
+    subgraph Execution ["AI Execution Layer"]
+        Agent["AI Coding Agent"]:::agent
+    end
+
+    Prompt["Prompt<br/>(minimal instructions)"]:::prompt -->|"triggers task"| Agent
+
+    subgraph Brain ["Project Brain"]
+        subgraph DOCS ["_DOCS — static constraints"]
+            PRD["PRD.md"]:::docs
+            Arch["Architecture.md"]:::docs
+            Design["Design.md"]:::docs
+            DB["Database.md"]:::docs
+            API["API.md"]:::docs
+        end
+        subgraph TASK ["_TASK — dynamic state"]
+            Status["CurrentStatus.md"]:::task
+            Handover["Handover log"]:::task
+        end
+    end
+
+    Brain -->|"injects context"| Agent
+
+    style Execution fill:#fafaf7,stroke:#cfcdc4,stroke-width:1px,color:#26251e
+    style Brain fill:#f7f7f4,stroke:#e6e5e0,stroke-width:1px,color:#26251e
+    style DOCS fill:#ffffff,stroke:#9fc9a2,stroke-width:1px,color:#26251e
+    style TASK fill:#ffffff,stroke:#c0a8dd,stroke-width:1px,color:#26251e
