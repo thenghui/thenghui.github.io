@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Development &amp; Documentation SOP — Verity</title>
+<link rel="icon" href="data:,">
+<style>
+  :root{
+    --ink:#14110F; --paper:#F7F5F1; --accent:#B4310E;
+    --muted:#6B6560; --hair:#DED8CF; --card:#FFFDFA;
+    --u: min(1vw, 1.7778vh);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%; overflow:hidden;}
+  body{
+    background:#E8E4DD; color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+    display:flex; align-items:center; justify-content:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .stage{
+    width:min(100vw, 177.78vh); aspect-ratio:16/9;
+    background:var(--paper); overflow:hidden;
+    padding: calc(var(--u)*2.9) calc(var(--u)*3.6);
+    display:flex; flex-direction:column; gap:calc(var(--u)*1.5);
+    box-shadow:0 calc(var(--u)*0.6) calc(var(--u)*3) rgba(20,17,15,.16);
+  }
+
+  header{display:flex; align-items:baseline; justify-content:space-between;
+         border-bottom:1px solid var(--hair); padding-bottom:calc(var(--u)*1);}
+  h1{font-size:calc(var(--u)*2.05); font-weight:640; letter-spacing:-0.015em;}
+  .meta{font-size:calc(var(--u)*1.1); color:var(--muted); text-align:right; line-height:1.42;}
+  .meta b{color:var(--ink); font-weight:600;}
+  .meta .ver{color:#9C948A;}
+
+  .rule{display:grid; grid-template-columns:calc(var(--u)*9.5) 1fr;
+        gap:calc(var(--u)*2.4); align-items:start;}
+  .rule-label{font-size:calc(var(--u)*1.02); font-weight:700; letter-spacing:.15em;
+              color:var(--accent); padding-top:calc(var(--u)*0.5);}
+  .rule-text{font-size:calc(var(--u)*2.45); font-weight:600; line-height:1.16;
+             letter-spacing:-0.02em;}
+  .rule-text em{font-style:normal; color:var(--accent);}
+  .rule-sub{font-size:calc(var(--u)*1.16); color:var(--muted); margin-top:calc(var(--u)*0.55);}
+
+  .grid{display:grid; grid-template-columns:repeat(6,1fr);
+        gap:calc(var(--u)*1.1); flex:1; min-height:0;}
+  .card{background:var(--card); border:1px solid var(--hair);
+        padding:calc(var(--u)*1.1) calc(var(--u)*1.3);
+        display:grid; grid-template-columns:calc(var(--u)*3.4) 1fr;
+        gap:calc(var(--u)*0.32) calc(var(--u)*1);
+        align-content:center; grid-column:span 2; overflow:hidden;}
+  .card.w3{grid-column:span 3;}
+  .card.w2{grid-column:span 2;}
+  .card.w4{grid-column:span 4;}
+  .num{grid-row:1 / span 3; font-size:calc(var(--u)*2); font-weight:700;
+       color:var(--accent); letter-spacing:-0.03em; line-height:1;}
+  .card h2{font-size:calc(var(--u)*1.36); font-weight:650; letter-spacing:-0.012em;
+           line-height:1.2;}
+  .card p{font-size:calc(var(--u)*1.14); line-height:1.42; color:#3B3630;}
+  .card p + p{margin-top:calc(var(--u)*0.4);}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+       font-size:.92em; background:#EFEBE4; padding:0 .26em; border-radius:2px;
+       color:#2A2621; white-space:nowrap;}
+  strong{font-weight:660; color:var(--ink);}
+  .flag{color:var(--accent); font-weight:650;}
+
+  /* 01 — folder tree */
+  .tree{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+        font-size:calc(var(--u)*1.02); line-height:1.58; color:var(--ink);
+        background:#EFEBE4; border-left:calc(var(--u)*0.26) solid var(--accent);
+        padding:calc(var(--u)*0.55) calc(var(--u)*0.8); white-space:pre;}
+  .tree .br{color:#8A8073;}
+  .tree .cm{color:#8C8479;}
+
+  /* 05 — registry table header */
+  .reg{width:100%; border-collapse:collapse; margin-top:calc(var(--u)*0.15);}
+  .reg th{font-size:calc(var(--u)*0.92); font-weight:680; text-align:left;
+          letter-spacing:.045em; text-transform:uppercase; color:var(--ink);
+          padding:calc(var(--u)*0.3) calc(var(--u)*0.5) calc(var(--u)*0.42) 0;
+          border-bottom:calc(var(--u)*0.15) solid var(--accent); white-space:nowrap;}
+  .reg td{font-size:calc(var(--u)*0.95); color:#B3ABA0; padding:calc(var(--u)*0.34) 0;
+          border-bottom:1px solid var(--hair);}
+
+  @media print{
+    @page{size:297mm 167mm; margin:0;}
+    html,body{overflow:visible;}
+    body{background:#fff; display:block;}
+    .stage{width:297mm; height:167mm; aspect-ratio:auto; box-shadow:none; --u:2.97mm;}
+  }
+</style>
+</head>
+<body>
+<main class="stage">
+
+  <header>
+    <h1>Development &amp; Documentation SOP</h1>
+    <div class="meta"><b>Verity · Digital Automation</b><br>Adopted 4 September 2026 &nbsp;<span class="ver">· v1.0 · D-054</span></div>
+  </header>
+
+  <section class="rule">
+    <div class="rule-label">THE RULE</div>
+    <div>
+      <div class="rule-text">GitLab is the source of truth. Abacus is a workspace — <em>not a repository.</em></div>
+      <div class="rule-sub">If it only exists in an Abacus conversation, it is not a project yet.</div>
+    </div>
+  </section>
+
+  <section class="grid">
+
+    <article class="card">
+      <div class="num">01</div>
+      <h2>One repo, one skeleton</h2>
+      <div class="tree"><span class="cm">&lt;project&gt;/</span>
+<span class="br">├──</span> README.md
+<span class="br">├──</span> _DOCS/
+<span class="br">├──</span> CurrentStatus.md
+<span class="br">├──</span> .env.example
+<span class="br">└──</span> src/</div>
+      <p><code>_DOCS/</code> = the stable facts. <code>CurrentStatus.md</code> says <strong>why</strong>.</p>
+    </article>
+
+    <article class="card">
+      <div class="num">02</div>
+      <h2>Secrets never in the repo</h2>
+      <p><code>.env.example</code> in Git — key names, <strong>no values</strong>.</p>
+      <p><strong>One key · one owner · one project.</strong> <span class="flag">Rotate on every departure.</span></p>
+    </article>
+
+    <article class="card">
+      <div class="num">03</div>
+      <h2>“Handed over” = somebody else&nbsp;ran&nbsp;it</h2>
+      <p>Someone who did <strong>not</strong> write it clones, configures, runs it end to end, changes one thing.</p>
+      <p class="flag">Until then, confidence caps at 6.</p>
+    </article>
+
+    <article class="card w2">
+      <div class="num">04</div>
+      <h2>Session discipline</h2>
+      <p>A new chat per module — flush to <code>CurrentStatus.md</code> first.</p>
+      <p>Long sessions cost <strong>more</strong> tokens and drift.</p>
+    </article>
+
+    <article class="card w4">
+      <div class="num">05</div>
+      <h2>The registry</h2>
+      <table class="reg">
+        <thead><tr>
+          <th>Project</th><th>Repo</th><th>Owner</th><th>Backup</th>
+          <th>Env</th><th>Confidence</th><th>Last run test</th>
+        </tr></thead>
+        <tbody><tr>
+          <td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td>
+        </tr></tbody>
+      </table>
+      <p class="flag">Not on the registry = does not exist.</p>
+    </article>
+
+  </section>
+
+</main>
+</body>
+</html>
