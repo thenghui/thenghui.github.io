@@ -16,7 +16,7 @@ job ad — cross-platform ad fingerprinting across JobStreet, LinkedIn, Indeed, 
 - 📦 [Download the skill (zip)](th-job-ad-employer-reveal.zip)
 - 📄 [Read SKILL.md](th-job-ad-employer-reveal/SKILL.md)
 - 📁 [Browse the folder](th-job-ad-employer-reveal/)
-- 📝 [Install & usage instructions](README.md)
+- 📝 [Install & usage instructions](th-job-ad-employer-reveal/README.md)
 
 ### Quick install
 
