@@ -1,0 +1,4 @@
+interface:
+  display_name: "TH-Job-Ad Employer Reveal"
+  short_description: "Unmask the real employer + hiring contacts behind a confidential recruitment-agency job ad via cross-platform ad fingerprinting"
+  default_prompt: "Use $th-job-ad-employer-reveal to find out which company and hiring person is really behind this agency job ad: <URL>"
