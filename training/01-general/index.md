@@ -342,26 +342,8 @@ footer small { font-size: 12px; }
 .tc-btn svg { width: 15px; height: 15px; }
 .tc-btn:hover,
 .tc-btn:focus { background: var(--tc-gold); color: var(--tc-navy); font-weight: 600; }
-.tc-doc {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 10px 11px;
-  border: 1px solid var(--tc-line);
-  border-radius: 9px;
-  background: #fff;
-  color: var(--tc-muted);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1;
-  text-decoration: none;
-}
-.tc-doc svg { width: 14px; height: 14px; }
-.tc-doc:hover,
-.tc-doc:focus { border-color: var(--tc-gold); color: var(--tc-gold-deep); font-weight: 600; }
 .tc-title a:focus-visible,
 .tc-btn:focus-visible,
-.tc-doc:focus-visible,
 .tc-topbar a:focus-visible,
 .tc-hero a:focus-visible {
   outline: 3px solid rgba(201,155,46,.55);
@@ -593,10 +575,6 @@ footer small { font-size: 12px; }
       <div class="tc-card-foot">
         <a class="tc-btn" href="ai_dev/ai-coding-assistants-training-outline.html" aria-label="View the AI Coding Assistants training outline">View outline
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a class="tc-doc" href="ai_dev/ai-coding-assistants-training-outline.docx" aria-label="Download the AI Coding Assistants outline as DOCX">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          DOCX
         </a>
       </div>
     </article>
