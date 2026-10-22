@@ -37,10 +37,10 @@ a:hover, a:focus { color: var(--tc-gold-deep); font-weight: inherit; }
   padding: 0 28px 56px;
 }
 
-header {
-  position: static;
-  float: none;
-  width: 100%;
+/* Custom top bar replaces the theme header on this page only. */
+.wrapper > header { display: none; }
+
+.tc-topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,18 +50,16 @@ header {
   margin: 0 0 26px;
   border-bottom: 1px solid var(--tc-line);
 }
-header h1 {
-  margin: 0;
+.tc-brand {
   font-family: 'Sora', 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: .2px;
+  color: var(--tc-navy);
+  text-decoration: none;
 }
-header h1 a { color: var(--tc-navy); text-decoration: none; }
-header h1 a:hover { color: var(--tc-gold-deep); }
-header p:not(.view) { display: none; }
-header .view { margin: 0; }
-header .view a {
+.tc-brand:hover { color: var(--tc-gold-deep); }
+.tc-profile-link {
   display: inline-block;
   padding: 7px 12px;
   border: 1px solid var(--tc-line);
@@ -72,7 +70,7 @@ header .view a {
   font-weight: 600;
   text-decoration: none;
 }
-header .view a:hover { border-color: var(--tc-gold); color: var(--tc-gold-deep); }
+.tc-profile-link:hover { border-color: var(--tc-gold); color: var(--tc-gold-deep); }
 
 section {
   width: 100%;
@@ -365,7 +363,7 @@ footer small { font-size: 12px; }
 .tc-title a:focus-visible,
 .tc-btn:focus-visible,
 .tc-doc:focus-visible,
-header a:focus-visible,
+.tc-topbar a:focus-visible,
 .tc-hero a:focus-visible {
   outline: 3px solid rgba(201,155,46,.55);
   outline-offset: 3px;
@@ -401,7 +399,9 @@ header a:focus-visible,
 }
 
 @media (max-width: 480px) {
-  header .view { display: none; }
+  .tc-topbar { gap: 10px; }
+  .tc-brand { font-size: 14px; }
+  .tc-profile-link { font-size: 11.5px; padding: 6px 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -420,6 +420,11 @@ header a:focus-visible,
   .tc-card { break-inside: avoid; box-shadow: none; }
 }
 </style>
+
+<div class="tc-topbar">
+  <a class="tc-brand" href="/">ThengHui - The AI Trainer</a>
+  <a class="tc-profile-link" href="https://thenghui.com">View ThengHui's Profile</a>
+</div>
 
 <div class="tc-hero">
   <span class="tc-eyebrow"><span class="tc-dot"></span>AI Training Catalogue</span>
