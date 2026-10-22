@@ -424,7 +424,7 @@ header a:focus-visible,
 <div class="tc-hero">
   <span class="tc-eyebrow"><span class="tc-dot"></span>AI Training Catalogue</span>
   <h1>Training Outlines</h1>
-  <p>Practical, hands-on AI training programmes by <a href="03_Trainer_Profile/CTH-HRDC-Trainer-Profile.html">Ts. Chong Theng Hui</a> — delivered in-house, face-to-face, and HRDC-claimable. Every programme is built around real workplace tasks and a personal action plan.</p>
+  <p>Practical, hands-on AI training programmes by <a href="03_Trainer_Profile/CTH-HRDC-Trainer-Profile.html">Ts. Chong Theng Hui</a> — delivered in-house, face-to-face, and HRDC-claimable. Every programme is built around real workplace tasks and a practical takeaway you can use immediately.</p>
   <div class="tc-hero-tags">
     <span>In-house delivery</span>
     <span>Hands-on</span>
@@ -588,6 +588,7 @@ header a:focus-visible,
         <span class="tc-tag">Claude Code</span>
         <span class="tc-tag">Codex</span>
         <span class="tc-tag">GitHub Copilot</span>
+        <span class="tc-tag">6 modules</span>
       </div>
       <div class="tc-card-foot">
         <a class="tc-btn" href="ai_dev/ai-coding-assistants-training-outline.html" aria-label="View the AI Coding Assistants training outline">View outline
