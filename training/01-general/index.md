@@ -58,7 +58,6 @@ a:hover, a:focus { color: var(--tc-gold-deep); font-weight: inherit; }
   color: var(--tc-navy);
   text-decoration: none;
 }
-.tc-brand:hover { color: var(--tc-gold-deep); }
 .tc-profile-link {
   display: inline-block;
   padding: 7px 12px;
@@ -422,7 +421,7 @@ footer small { font-size: 12px; }
 </style>
 
 <div class="tc-topbar">
-  <a class="tc-brand" href="/">ThengHui - The AI Trainer</a>
+  <span class="tc-brand">ThengHui - The AI Trainer</span>
   <a class="tc-profile-link" href="https://thenghui.com">View ThengHui's Profile</a>
 </div>
 
@@ -560,10 +559,6 @@ footer small { font-size: 12px; }
       <div class="tc-card-foot">
         <a class="tc-btn" href="ai_productivity_healthcare/digital-productivity-data-awareness-training-outline.html" aria-label="View the Digital Productivity and Data Awareness training outline">View outline
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a class="tc-doc" href="ai_productivity_healthcare/M8%20-%20DIGITAL%20PRODUCTIVITY%20%26%20DATA%20AWARENESS%20%281%20DAY%29.docx" aria-label="Download the Digital Productivity and Data Awareness outline as DOCX">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          DOCX
         </a>
       </div>
     </article>
