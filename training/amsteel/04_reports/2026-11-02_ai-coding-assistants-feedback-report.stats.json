@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "AI for IT Team: Accelerating Software Development with AI Coding Assistants",
+    "date": "02 November 2026",
+    "responses": 8,
+    "generated": "2026-11-03T10:21:38",
+    "columns": {
+      "rating": [
+        "1. How would you rate the overall quality of the training?",
+        "4. How effective was the trainer in delivering the content?"
+      ],
+      "choice": [
+        "3. Was the content of the training relevant to your job or goals?"
+      ],
+      "text": [
+        "2. What aspect/module of the training did you find most valuable?",
+        "5. What topics would you like to learn about in future training sessions?"
+      ],
+      "meta": [
+        "Timestamp",
+        "Username"
+      ]
+    },
+    "client": "Amsteel"
+  },
+  "ratings": [
+    {
+      "question": "1. How would you rate the overall quality of the training?",
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6,
+        "5": 2
+      },
+      "responses": 8,
+      "average": 4.25,
+      "pct_top2": 100.0,
+      "pct_bottom": 0.0,
+      "scale": {
+        "1": "Very Poor",
+        "5": "Excellent"
+      }
+    },
+    {
+      "question": "4. How effective was the trainer in delivering the content?",
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6,
+        "5": 2
+      },
+      "responses": 8,
+      "average": 4.25,
+      "pct_top2": 100.0,
+      "pct_bottom": 0.0,
+      "scale": {
+        "1": "Ineffective",
+        "5": "Highly Effective"
+      }
+    }
+  ],
+  "choices": [
+    {
+      "question": "3. Was the content of the training relevant to your job or goals?",
+      "distribution": {
+        "Yes": 4,
+        "Somewhat relevant": 4
+      },
+      "responses": 8,
+      "pct_positive": 100.0,
+      "pct_fully_positive": 50.0
+    }
+  ],
+  "text": {
+    "valuable": {
+      "question": "2. What aspect/module of the training did you find most valuable?",
+      "responses": 8,
+      "answered": 8,
+      "no_answer": 0,
+      "themes": {
+        "Tools, tips & techniques shared": 3,
+        "Practical / hands-on activities": 2,
+        "Real-life examples & case studies": 2,
+        "Trainer's clarity & delivery": 1
+      },
+      "examples": {
+        "Tools, tips & techniques shared": [
+          "Tools tips",
+          "New AI info and tips",
+          "Tools"
+        ],
+        "Practical / hands-on activities": [
+          "More practical",
+          "Hands on activities"
+        ],
+        "Real-life examples & case studies": [
+          "Real life example",
+          "Use case study"
+        ],
+        "Trainer's clarity & delivery": [
+          "Friendly and clear."
+        ]
+      },
+      "unclassified": [],
+      "coding": "recoded after manual review"
+    },
+    "future": {
+      "question": "5. What topics would you like to learn about in future training sessions?",
+      "responses": 8,
+      "answered": 7,
+      "no_answer": 1,
+      "themes": {
+        "Hands-on practice in AI": 2,
+        "Cybersecurity, DPO & compliance": 2,
+        "Advanced / deeper AI content": 1,
+        "AI agents & task automation": 1,
+        "General AI, no specific topic": 1
+      },
+      "examples": {
+        "Hands-on practice in AI": [
+          "More practical",
+          "More  hands on training in AI"
+        ],
+        "Cybersecurity, DPO & compliance": [
+          "Cybersecurity and DPO related",
+          "Cybersecurity"
+        ],
+        "Advanced / deeper AI content": [
+          "Deeper AI exposion"
+        ],
+        "AI agents & task automation": [
+          "Automate task"
+        ],
+        "General AI, no specific topic": [
+          "Related to AI"
+        ]
+      },
+      "unclassified": [],
+      "coding": "recoded after manual review"
+    }
+  }
+}

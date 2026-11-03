@@ -1,0 +1,3 @@
+# Raw survey exports carry participant email addresses; keep them out of the public site.
+*.csv
+*.zip
