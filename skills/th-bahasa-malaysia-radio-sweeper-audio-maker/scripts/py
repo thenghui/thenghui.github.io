@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Run a skill script with numpy/scipy available, bootstrapping a cached venv on first use.
+# The venv lives in ~/.cache so it never ships inside the skill folder or the published zip.
+set -euo pipefail
+CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/th-bahasa-malaysia-radio-sweeper-audio-maker"
+VENV="$CACHE/venv"
+
+if [ ! -x "$VENV/bin/python" ]; then
+  echo "bootstrapping python env in $VENV (one-time, needs network)" >&2
+  mkdir -p "$CACHE"
+  python3 -m venv "$VENV"
+  "$VENV/bin/pip" install --quiet --upgrade pip >/dev/null
+  "$VENV/bin/pip" install --quiet numpy scipy >/dev/null
+fi
+
+exec "$VENV/bin/python" "$@"

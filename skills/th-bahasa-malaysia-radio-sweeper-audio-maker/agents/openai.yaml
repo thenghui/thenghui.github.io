@@ -1,0 +1,4 @@
+interface:
+  display_name: "TH Bahasa Malaysia Radio Sweeper Audio Maker"
+  short_description: "Bahasa Malaysia radio imaging audio: Gemini TTS voice + synth bed, mastered to -16 LUFS"
+  default_prompt: "Use $th-bahasa-malaysia-radio-sweeper-audio-maker to produce a Bahasa Malaysia radio imaging sequence with a Malaysian voice, music bed, designed exits, and WAV/MP3 deliverables."

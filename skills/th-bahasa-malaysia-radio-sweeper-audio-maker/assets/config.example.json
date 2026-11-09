@@ -1,0 +1,30 @@
+{
+  "title": "Demo FM imaging sequence",
+  "bpm": 118,
+  "total": 66.0,
+  "chords": [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]],
+
+  "arrangement": {
+    "intro_until": 8.136,
+    "drums_from": 8.136,
+    "full_from": 16.271,
+    "intro_pad_gain": 2.85,
+    "pad_gain": 0.62,
+    "breakdowns": [[16.271, 2.034]]
+  },
+
+  "voice": [
+    {"name": "station ident", "file": "id_main.wav",   "at": 0.6},
+    {"name": "sweeper",      "file": "sweeper.wav",    "at": 8.8},
+    {"name": "short ident",  "file": "id_short.wav",   "at": 18.4},
+    {"name": "TOH opener",   "file": "toh.wav",        "at": 25.4},
+    {"name": "promo",        "file": "promo.wav",      "at": 34.2},
+    {"name": "final tag",    "file": "final_tag.wav",  "at": 41.6}
+  ],
+
+  "logos": [0.35, 17.15, 31.6, 46.2, 62.05],
+  "exits": [8.136, 16.271, 24.407, 32.542, 40.678],
+  "final_exit": {"at": 63.051, "tail": 2.9, "chord": [57, 60, 64, 69, 76, 81]},
+
+  "mix": {"duck": 0.33, "bed_gain": 0.80, "vo_rms_db": -17.5, "peak": 0.92}
+}

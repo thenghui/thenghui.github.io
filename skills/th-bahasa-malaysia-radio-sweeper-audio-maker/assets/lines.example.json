@@ -1,0 +1,25 @@
+[
+  {"name": "id_main",
+   "style": "warm, smiling, casual radio delivery",
+   "text": "Demo FM. Muzik yang hangat, sepanjang hari. <short pause> Yang Terhangat, Yang Terbaik."},
+
+  {"name": "sweeper",
+   "style": "friendly and conversational, like talking to a friend in the car",
+   "text": "Korang tengah drive pergi kerja, kan? <short pause> Sama la kita. Demo FM, kawan perjalanan korang. Jom, layan."},
+
+  {"name": "id_short",
+   "style": "bright, casual and confident",
+   "text": "Demo FM! Ini station korang. Lagu terbaik, setiap jam."},
+
+  {"name": "toh",
+   "style": "warm and energetic, natural Malaysian conversational cadence",
+   "text": "Dah pukul lapan pagi, korang. <short pause> Satu jam muzik tanpa henti, cerita paling panas, semua ada kat sini."},
+
+  {"name": "promo",
+   "style": "playful and inviting, conversational",
+   "text": "Esok pagi ada kejutan besar untuk korang. <short pause> Jangan miss, tau!"},
+
+  {"name": "final_tag",
+   "style": "warm, gentle and smiling",
+   "text": "Demo FM. Yang Terhangat, Yang Terbaik."}
+]

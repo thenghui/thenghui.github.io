@@ -18,6 +18,15 @@ job ad — cross-platform ad fingerprinting across JobStreet, LinkedIn, Indeed, 
 - 📁 [Browse the folder](th-job-ad-employer-reveal/)
 - 📝 [Install & usage instructions](th-job-ad-employer-reveal/README.md)
 
+## th-bahasa-malaysia-radio-sweeper-audio-maker
+
+Produce a broadcast-plausible Bahasa Malaysia radio imaging sequence — station ident, sweeper, short ID, TOH opener, promo sting and a transition into music — with a synthetic Malaysian voice (Gemini 3.8 Flash TTS) over a synthesised music bed, then master to −16 LUFS / −1 dBTP and package the WAV/M.
+
+- 📦 [Download the skill (zip)](th-bahasa-malaysia-radio-sweeper-audio-maker.zip)
+- 📄 [Read SKILL.md](th-bahasa-malaysia-radio-sweeper-audio-maker/SKILL.md)
+- 📁 [Browse the folder](th-bahasa-malaysia-radio-sweeper-audio-maker/)
+- 📝 [Install & usage instructions](th-bahasa-malaysia-radio-sweeper-audio-maker/README.md)
+
 ### Quick install
 
 Unpack the zip into your agent's skills folder, e.g. Claude Code:
