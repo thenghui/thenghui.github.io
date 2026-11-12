@@ -1,0 +1,3 @@
+# Client-supplied requirement materials; keep them out of the public site.
+*
+!.gitignore

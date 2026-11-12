@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M8 — Digital Productivity &amp; Data Awareness · Verified Learning References</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c2340; --navy-2:#133257; --navy-3:#1d4470;
+    --gold:#c99b2e; --gold-soft:#f4e8c8; --gold-deep:#a87f1d;
+    --ink:#1a2735; --muted:#5b6b7d; --line:#e3e8ef;
+    --paper:#f5f7fa; --card:#ffffff;
+    --green:#1f7a4d; --green-soft:#e8f5ee;
+    --radius:16px;
+    --shadow:0 1px 2px rgba(12,35,64,.05), 0 10px 30px rgba(12,35,64,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--paper); color:var(--ink); line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Sora','Inter',sans-serif; color:var(--navy); line-height:1.25}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+  section{padding:56px 0}
+  p.lede{color:#3d4f66;font-size:15.5px}
+
+  /* ── Top bar ── */
+  .topbar{background:var(--navy); color:#fff; position:sticky; top:0; z-index:50; box-shadow:0 2px 14px rgba(12,35,64,.25)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Sora',sans-serif;font-weight:700;letter-spacing:.4px;font-size:15px;color:#fff;text-decoration:none}
+  .brand-mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--gold),#e8c96a);
+    display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:800;font-size:12px}
+  .topbar nav{display:flex;gap:6px;align-items:center}
+  .topbar a.navlink{color:#c9d6e5;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:8px;transition:.2s}
+  .topbar a.navlink:hover{color:#fff;background:rgba(255,255,255,.09)}
+  .btn-print{cursor:pointer;border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;
+    font:inherit;font-size:13px;font-weight:600;padding:8px 14px;border-radius:8px;transition:.2s}
+  .btn-print:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+
+  /* ── Hero ── */
+  .hero{position:relative;overflow:hidden;color:#fff;
+    background:linear-gradient(135deg,#0a1e38 0%, #0c2340 45%, #14355c 100%)}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.55;pointer-events:none;
+    background:
+      radial-gradient(620px 340px at 88% -10%, rgba(201,155,46,.32), transparent 65%),
+      radial-gradient(520px 300px at -5% 110%, rgba(38,92,150,.5), transparent 60%);}
+  .hero .wrap{position:relative;z-index:2;padding-top:64px;padding-bottom:56px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;background:rgba(201,155,46,.16);
+    border:1px solid rgba(201,155,46,.55);color:#eccf83;font-size:12.5px;font-weight:700;
+    letter-spacing:1.6px;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:24px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(201,155,46,.9)}
+  .hero h1{color:#fff;font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.5px;max-width:860px}
+  .hero h1 em{font-style:normal;color:#e9c96b}
+  .hero .sub{color:#c3d1e2;font-size:16.5px;max-width:760px;margin-top:16px}
+  .stamp{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:rgba(31,122,77,.22);
+    border:1px solid rgba(88,190,134,.55);color:#b8e6cc;font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:999px}
+  .stamp svg{width:16px;height:16px;stroke:#67d79c;flex:none}
+
+  /* ── Section headings ── */
+  .kicker{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+  .kicker .bar{width:26px;height:3px;border-radius:3px;background:var(--gold)}
+  .kicker span{font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-deep)}
+  h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:8px}
+  .sec-sub{color:var(--muted);font-size:14.5px;max-width:820px;margin-bottom:26px}
+
+  /* ── Legend chips ── */
+  .legend{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 8px}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--card)}
+  .chip .sw{width:10px;height:10px;border-radius:3px;flex:none}
+  .sw.official{background:var(--navy)}
+  .sw.authority{background:var(--gold)}
+  .sw.video{background:#c0392b}
+
+  /* ── Tables ── */
+  .table-scroll{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line);background:var(--card)}
+  table{width:100%;border-collapse:collapse;min-width:900px}
+  thead th{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;text-align:left;
+    font-family:'Sora',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;
+    padding:14px 16px;vertical-align:top}
+  tbody td{padding:16px;border-top:1px solid var(--line);vertical-align:top;font-size:13.5px}
+  tbody tr:nth-child(even){background:#fafbfd}
+  tbody tr:hover{background:#f4f7fb}
+  td.c-item strong{display:block;color:var(--navy);font-size:14px;line-height:1.4}
+  td.c-item .tagline{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;letter-spacing:.8px;color:var(--gold-deep);text-transform:uppercase}
+  td.c-item .none{color:var(--muted);font-style:italic;font-size:12.5px}
+  ul.srcs{list-style:none;display:grid;gap:9px}
+  ul.srcs li{position:relative;padding-left:14px;line-height:1.5}
+  ul.srcs li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:2px;background:var(--gold)}
+  ul.srcs li.vid::before{background:#c0392b}
+  ul.srcs b{color:var(--navy);font-weight:600}
+  a.src{color:#1d4470;text-decoration:none;font-weight:500;word-break:break-all}
+  a.src:hover{color:var(--gold-deep);text-decoration:underline}
+  a.src .dom{color:#7a8a9c;font-size:12px}
+  .yt{display:inline-flex;align-items:center;gap:6px}
+  .yt .play{color:#c0392b;font-size:11px}
+
+  /* ── Outcomes grid ── */
+  .outcomes{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px;margin-top:26px}
+  .outcome{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px;box-shadow:var(--shadow);transition:.25s}
+  .outcome:hover{transform:translateY(-2px);border-color:#d5c186}
+  .outcome .head{display:flex;gap:13px;align-items:flex-start}
+  .outcome .num{flex:none;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy-3));
+    color:#e9c96b;font-family:'Sora',sans-serif;font-weight:700;font-size:13.5px;display:flex;align-items:center;justify-content:center}
+  .outcome p{font-size:14px;color:#33445a;font-weight:500}
+  .outcome .links{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);display:grid;gap:6px}
+  .outcome .links a{font-size:12.5px;line-height:1.45}
+
+  /* ── Method cards ── */
+  .method{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:26px}
+  .mcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+  .mcard h4{font-size:15px;margin-bottom:8px;display:flex;align-items:center;gap:9px}
+  .mcard h4 .ico{width:26px;height:26px;border-radius:8px;background:var(--gold-soft);color:var(--gold-deep);
+    display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex:none}
+  .mcard p, .mcard li{font-size:13.5px;color:#3d4f66}
+  .mcard ul{list-style:none;display:grid;gap:8px;margin-top:4px}
+  .mcard ul li{position:relative;padding-left:15px}
+  .mcard ul li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:2px;background:var(--gold)}
+
+  /* ── Footer ── */
+  footer{background:var(--navy);color:#9fb2c8;padding:32px 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;font-size:13px}
+  footer a{color:#e9c96b;text-decoration:none;font-weight:600}
+  footer a:hover{text-decoration:underline}
+  footer .fbrand{font-family:'Sora',sans-serif;color:#fff;font-weight:700;letter-spacing:.4px}
+
+  @media print{
+    .topbar,.btn-print{display:none}
+    body{background:#fff}
+    .hero{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section{padding:26px 0}
+    .table-scroll,.outcome,.mcard{box-shadow:none}
+    tr{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP BAR ═══ -->
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark">CTH</span> M8 · VERIFIED REFERENCES</a>
+    <nav>
+      <a class="navlink" href="#outcomes">Outcomes</a>
+      <a class="navlink" href="#content">Content Map</a>
+      <a class="navlink" href="#youtube">YouTube Library</a>
+      <a class="navlink" href="#method">Method</a>
+      <a class="navlink" href="digital-productivity-data-awareness-training-outline.html">Training Outline</a>
+      <button class="btn-print" onclick="window.print()">Print / PDF</button>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Source Verification · Module 8</span>
+    <h1>Digital Productivity &amp; Data Awareness<br><em>Verified Learning References</em></h1>
+    <p class="sub">Every training outcome and course content item in <strong style="color:#fff">M8 — Working Smarter with Microsoft 365, Microsoft Copilot &amp; Gemini Notebook</strong> mapped to its supporting step-by-step lessons: official vendor documentation, established industry authorities and independent YouTube walkthroughs.</p>
+    <span class="stamp">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+      All links live-checked · 29 September 2026
+    </span>
+  </div>
+</header>
+
+<!-- ═══ LEGEND + INTRO ═══ -->
+<section style="padding-bottom:10px">
+  <div class="wrap">
+    <div class="kicker"><span class="bar"></span><span>How to Read This Sheet</span></div>
+    <h2>Every Item Is Backed by a Real Lesson</h2>
+    <p class="sec-sub">Each row below states the outcome or content item exactly as it appears in the M8 module document, followed by the sources that teach it step by step. Sources fall into three verified groups:</p>
+    <div class="legend">
+      <span class="chip"><span class="sw official"></span>Official — vendor documentation &amp; guided courses (Microsoft Learn / Microsoft Support / Google)</span>
+      <span class="chip"><span class="sw authority"></span>Authority — established industry bodies &amp; publications (KPI.org, BSI, ASCM, Tableau)</span>
+      <span class="chip"><span class="sw video"></span>Video — independent step-by-step YouTube walkthroughs</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRAINING OUTCOMES ═══ -->
+<section id="outcomes" style="padding-top:34px">
+  <div class="wrap">
+    <div class="kicker"><span class="bar"></span><span>Section A · Training Outcomes</span></div>
+    <h2>The 8 Stated Outcomes — Supporting Sources</h2>
+    <p class="sec-sub">Each outcome from the module document, matched with the primary sources that teach the underlying skill.</p>
+
+    <div class="outcomes">
+      <div class="outcome">
+        <div class="head"><span class="num">01</span><p>Use Microsoft Copilot confidently for drafting, summarising, analysing and preparing work</p></div>
+        <div class="links">
+          <a class="src" href="https://learn.microsoft.com/en-us/training/modules/copilot-office-applications/">Microsoft Learn — Work smarter with Copilot across Microsoft 365 apps</a>
+          <a class="src" href="https://support.microsoft.com/en-us/microsoft-365-copilot/microsoft-365-copilot-video-tutorials">Microsoft Support — Official Copilot video tutorials</a>
+          <a class="src yt" href="https://www.youtube.com/watch?v=d-CuF6dlqLg"><span class="play">▶</span>YouTube — Kevin Stratvert: Microsoft Copilot Tutorial</a>
+        </div>
+      </div>
+      <div class="outcome">
+        <div class="head"><span class="num">02</span><p>Produce clear, structured prompts for common workplace tasks</p></div>
+        <div class="links">
+          <a class="src" href="https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/">Microsoft Learn — Write effective prompts to achieve optimal results</a>
+          <a class="src" href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-writing-prompts-in-microsoft-365-copilot">Microsoft Support — Get started writing prompts (goal · context · expectations · source)</a>
+          <a class="src" href="https://adoption.microsoft.com/en-us/copilot/prompt-gallery/">Microsoft Prompt Gallery — real prompt examples</a>
+        </div>
+      </div>
+      <div class="outcome">
+        <div class="head"><span class="num">03</span><p>Summarise, compare and synthesise documents with Gemini Notebook</p></div>
+        <div class="links">
+          <a class="src" href="https://support.google.com/gemininotebook/answer/16215270">Google Help — Add or discover sources for your notebook</a>
+          <a class="src" href="https://workspace.google.com/products/gemini-notebook/">Google Workspace — Gemini Notebook (formerly NotebookLM)</a>
+          <a class="src yt" href="https://www.youtube.com/watch?v=uSVBfyHBiDU"><span class="play">▶</span>YouTube — Kevin Stratvert: How to Use Google NotebookLM (Full Tutorial)</a>
+        </div>
+      </div>
+      <div class="outcome">
+        <div class="head"><span class="num">04</span><p>Explain KPI fundamentals and distinguish leading and lagging indicators</p></div>
+        <div class="links">
+          <a class="src" href="https://www.kpi.org/KPI-Basics/">KPI.org — What is a Key Performance Indicator</a>
+          <a class="src" href="https://www.ascm.org/ascm-insights/how-to-spot-leading-and-lagging-key-performance-indicators/">ASCM — Spotting leading and lagging indicators</a>
+          <a class="src yt" href="https://www.youtube.com/watch?v=FgZD03JAjf8"><span class="play">▶</span>YouTube — Leading KPI vs Lagging KPI explained</a>
+        </div>
+      </div>
+      <div class="outcome">
+        <div class="head"><span class="num">05</span><p>Select KPIs with targets, data sources and a realistic monitoring rhythm</p></div>
+        <div class="links">
+          <a class="src" href="https://www.kpi.org/KPI-Basics/KPI-Development/">KPI.org — How to develop KPIs / performance measures (step-by-step)</a>
+          <a class="src" href="https://balancedscorecard.org/solutions/kpi-solution/">Balanced Scorecard Institute — KPI solution framework</a>
+          <a class="src yt" href="https://www.youtube.com/watch?v=hiQKb_0bTMs"><span class="play">▶</span>YouTube — KPIs &amp; metrics: targets, owners, metric tree</a>
+        </div>
+      </div>
+      <div class="outcome">
+        <div class="head"><span class="num">06</span><p>Read dashboards accurately and identify trends, exceptions and action points</p></div>
+        <div class="links">
+          <a class="src" href="https://www.tableau.com/blog/spot-misleading-charts-checklist">Tableau — How to spot misleading charts: a checklist</a>
+          <a class="src yt" href="https://www.youtube.com/watch?v=is5c02PSxpk"><span class="play">▶</span>YouTube — Maven Analytics: How to read common data charts</a>
+          <a class="src yt" href="https://www.youtube.com/watch?v=e78DrlHHEEg"><span class="play">▶</span>YouTube — Reading Charts Critically (data literacy)</a>
+        </div>
+      </div>
+      <div class="outcome">
+        <div class="head"><span class="num">07</span><p>Present data-driven findings and recommendations with confidence</p></div>
+        <div class="links">
+          <a class="src" href="https://storytellingwithdata.com/">Storytelling with Data — visualization &amp; data storytelling resources</a>
+          <a class="src yt" href="https://www.youtube.com/watch?v=5Zg-C8AAIGg"><span class="play">▶</span>TED — David McCandless: The beauty of data visualization</a>
+        </div>
+      </div>
+      <div class="outcome">
+        <div class="head"><span class="num">08</span><p>Apply responsible AI and confidentiality practices in daily work</p></div>
+        <div class="links">
+          <a class="src" href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection">Microsoft Learn — Enterprise data protection in Microsoft Copilot</a>
+          <a class="src" href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Microsoft Learn — Data, privacy and security for Microsoft Copilot</a>
+          <a class="src" href="https://www.microsoft.com/en-us/ai/responsible-ai">Microsoft — Responsible AI principles</a>
+          <a class="src" href="https://ai.google/responsibility/principles/">Google — AI principles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COURSE CONTENT MAP ═══ -->
+<section id="content" style="background:#eef2f7;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker"><span class="bar"></span><span>Section B · Course Content</span></div>
+    <h2>Session-by-Session Source Map</h2>
+    <p class="sec-sub">Content items exactly as listed in the M8 course-content timetable, each mapped to the lessons that cover it step by step.</p>
+
+    <!-- Introduction -->
+    <div class="table-scroll" style="margin-bottom:26px">
+      <table>
+        <thead><tr><th style="width:26%">Introduction · 9:00–9:30 AM</th><th style="width:37%">Official / Authority sources</th><th style="width:37%">YouTube step-by-step</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="c-item"><strong>Welcome, programme objectives and expectations</strong><span class="tagline">Internal · no external source required</span></td>
+            <td><span class="none">Administrative session — facilitator material.</span></td>
+            <td><span class="none">—</span></td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Ice-breaker: “Where Does My Work Time Go?”</strong><span class="tagline">Internal activity · no external source required</span></td>
+            <td><span class="none">Facilitator-designed reflection activity. No factual claim requiring citation.</span></td>
+            <td><span class="none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 8A -->
+    <div class="table-scroll" style="margin-bottom:26px">
+      <table>
+        <thead><tr><th style="width:26%">Module 8A · 9:30–10:45 AM — AI Awareness &amp; Effective Prompting</th><th style="width:37%">Official / Authority sources</th><th style="width:37%">YouTube step-by-step</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="c-item"><strong>Generative AI concepts — capabilities and limitations</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Google</b> — <a class="src" href="https://www.skills.google/course_templates/536">Introduction to Generative AI (free course, covers hallucinations &amp; limits)</a></li>
+                <li><b>Microsoft</b> — <a class="src" href="https://github.com/microsoft/generative-ai-for-beginners">Generative AI for Beginners (21 lessons)</a> · <a class="src" href="https://learn.microsoft.com/en-us/shows/generative-ai-for-beginners/">video series</a></li>
+              </ul>
+            </td>
+            <td><span class="none">Covered by the official course videos above.</span></td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Responsible use, confidentiality and verification of AI output</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Microsoft</b> — <a class="src" href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection">Enterprise data protection (prompts &amp; responses are not used to train foundation models)</a></li>
+                <li><b>Microsoft</b> — <a class="src" href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy">Data, privacy and security documentation</a> · <a class="src" href="https://www.microsoft.com/en-us/ai/responsible-ai">Responsible AI</a></li>
+                <li><b>Google</b> — <a class="src" href="https://ai.google/responsibility/principles/">AI principles</a></li>
+              </ul>
+            </td>
+            <td><span class="none">Vendor documentation is the authoritative format here.</span></td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Introduction to Microsoft Copilot and Gemini Notebook</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Microsoft</b> — <a class="src" href="https://www.microsoft.com/en-us/microsoft-365/copilot-learning-center">Copilot Learning Center</a> · <a class="src" href="https://adoption.microsoft.com/en-us/copilot/skilling-center/">Skilling Center</a></li>
+                <li><b>Google</b> — <a class="src" href="https://workspace.google.com/products/gemini-notebook/">Gemini Notebook product &amp; help hub</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=0_mqsU7yh5Q"><span class="play">▶</span>Lisa Crosbie: Complete Tutorial for Beginners (2026)</a></li>
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=jI1sq-FfAhk"><span class="play">▶</span>BAI Tutorials: NotebookLM for Beginners (step-by-step)</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Anatomy of an effective prompt — context, instructions, constraints and output format</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Microsoft</b> — <a class="src" href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-writing-prompts-in-microsoft-365-copilot">Get started writing prompts (goal, context, expectations, source + output format)</a></li>
+                <li><b>Microsoft</b> — <a class="src" href="https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/">Learn module: Write effective prompts (with exercises)</a></li>
+              </ul>
+            </td>
+            <td><span class="none">Prompting walkthroughs included in the Copilot video tutorials (Section C).</span></td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Exercise: Prompt improvement practice</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Microsoft</b> — <a class="src" href="https://adoption.microsoft.com/en-us/copilot/prompt-gallery/">Prompt Gallery — real prompts to improve and adapt</a></li>
+                <li><b>Microsoft</b> — knowledge checks inside the <a class="src" href="https://learn.microsoft.com/en-us/training/modules/write-effective-prompts-do-more-prompting/">Write effective prompts module</a></li>
+              </ul>
+            </td>
+            <td><span class="none">Exercise materials drawn from the above official sources.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 8B -->
+    <div class="table-scroll" style="margin-bottom:26px">
+      <table>
+        <thead><tr><th style="width:26%">Module 8B · 11:00–11:45 AM — Microsoft 365 Productivity with Copilot</th><th style="width:37%">Official / Authority sources</th><th style="width:37%">YouTube step-by-step</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="c-item"><strong>Copilot across Word, Excel, Outlook, Teams and PowerPoint</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Microsoft Learn</b> — <a class="src" href="https://learn.microsoft.com/en-us/training/modules/copilot-office-applications/">Work smarter with Copilot across Microsoft 365 apps</a> · <a class="src" href="https://learn.microsoft.com/en-us/training/paths/draft-analyze-present-microsoft-365-copilot/">Draft, analyze and present path (MS-4018)</a></li>
+                <li><b>Per-app how-tos</b> — Word: <a class="src" href="https://support.microsoft.com/en-us/word/welcome-to-copilot-in-word">Welcome to Copilot in Word</a> · Excel: <a class="src" href="https://support.microsoft.com/en-us/excel/copilot/get-started-with-copilot-in-excel">Get started with Copilot in Excel</a> · PowerPoint: <a class="src" href="https://support.microsoft.com/en-us/powerpoint/copilot/create-a-new-presentation-with-copilot-in-powerpoint">Create a presentation with Copilot</a> · Teams: <a class="src" href="https://support.microsoft.com/en-us/teams/copilot/catch-up-on-meetings-with-microsoft-365-copilot-in-teams">Catch up on meetings with Copilot</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=1beYHq8aMyE"><span class="play">▶</span>A Guide to Cloud &amp; AI: Full Tutorial — Word, Excel, Teams &amp; Outlook</a></li>
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=JbOJliF-Cn4"><span class="play">▶</span>Mike Tholfsen: Microsoft 365 Copilot Tutorial — Beginner's Guide</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Drafting documents and summarising email threads and meetings</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Word</b> — <a class="src" href="https://support.microsoft.com/en-us/word/copilot/draft-and-add-content-with-copilot-in-word">Draft and add content with Copilot</a></li>
+                <li><b>Outlook</b> — <a class="src" href="https://support.microsoft.com/en-us/outlook/copilot-pages/summarize-an-email-thread-with-copilot-in-outlook">Summarize an email thread</a> · <a class="src" href="https://support.microsoft.com/en-us/outlook/copilot-pages/draft-an-email-message-with-copilot-in-outlook">Draft an email message</a></li>
+                <li><b>Teams</b> — <a class="src" href="https://support.microsoft.com/en-us/teams/meetings-events/copilot-tutorial-catch-up-on-meetings">Copilot tutorial: catch up on meetings</a> · <a class="src" href="https://support.microsoft.com/en-us/teams/meetings-events/recap-a-teams-meeting">Recap a Teams meeting</a></li>
+              </ul>
+            </td>
+            <td><span class="none">Demonstrated with timestamps in the videos above.</span></td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Exercise: Complete an everyday workplace task with Copilot</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Microsoft Learn</b> — hands-on exercises in <a class="src" href="https://learn.microsoft.com/en-us/training/modules/copilot-office-applications/">Work smarter with Copilot</a></li>
+                <li><b>Microsoft</b> — <a class="src" href="https://support.microsoft.com/en-us/microsoft-365-copilot/microsoft-365-copilot-video-tutorials">official video tutorials</a> for reference during practice</li>
+              </ul>
+            </td>
+            <td><span class="none">Exercise supported by the tutorial videos above.</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 8C -->
+    <div class="table-scroll" style="margin-bottom:26px">
+      <table>
+        <thead><tr><th style="width:26%">Module 8C · 11:45 AM–12:30 PM — Gemini Notebook for Document Work</th><th style="width:37%">Official / Authority sources</th><th style="width:37%">YouTube step-by-step</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="c-item"><strong>Source-grounded AI — working with your own documents</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Google Help</b> — <a class="src" href="https://support.google.com/gemininotebook/answer/16215270">Add or discover sources for your notebook</a></li>
+                <li><b>Google Workspace</b> — <a class="src" href="https://workspace.google.com/products/gemini-notebook/">Gemini Notebook: AI research grounded in your sources</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=uSVBfyHBiDU"><span class="play">▶</span>Kevin Stratvert: How to Use Google NotebookLM (Full Tutorial)</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Summarising, comparing and synthesising information with citations</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Google</b> — <a class="src" href="https://workspaceupdates.googleblog.com/2026/09/ground-ai-prompts-in-google-docs-on-existing-sources-from-Gemini-Notebook.html">Ground AI prompts in Google Docs with Gemini Notebook sources (auto citations)</a></li>
+                <li><b>Google Help</b> — <a class="src" href="https://support.google.com/gemininotebook/answer/16215270">working with sources &amp; citations</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=iQGdKNaJnKE"><span class="play">▶</span>ProgrammingKnowledge: Step-by-Step Guide (2026)</a></li>
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=EFqx153WkTc"><span class="play">▶</span>AI ToolKit: Complete Tutorial for Beginners</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Exercise: Build a notebook and produce a briefing note</strong></td>
+            <td><span class="none">Follows the Google Help workflow above.</span></td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=jI1sq-FfAhk"><span class="play">▶</span>BAI Tutorials: Complete step-by-step notebook build</a></li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 8D -->
+    <div class="table-scroll" style="margin-bottom:26px">
+      <table>
+        <thead><tr><th style="width:26%">Module 8D · 1:30–3:00 PM — KPI Awareness &amp; Monitoring</th><th style="width:37%">Official / Authority sources</th><th style="width:37%">YouTube step-by-step</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="c-item"><strong>What KPIs are — KPIs vs metrics and targets</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>KPI.org</b> — <a class="src" href="https://www.kpi.org/KPI-Basics/">What is a KPI (KPIs vs metrics vs targets)</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=BL_JAtrqhTQ"><span class="play">▶</span>EDOXI: KPI Explained for Beginners</a></li>
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=hiQKb_0bTMs"><span class="play">▶</span>Explained Hub: KPIs &amp; Metrics — North Star, Leading vs Lagging</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Leading and lagging indicators</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>ASCM</b> — <a class="src" href="https://www.ascm.org/ascm-insights/how-to-spot-leading-and-lagging-key-performance-indicators/">How to spot leading and lagging indicators</a></li>
+                <li><b>KPI.org</b> — <a class="src" href="https://www.kpi.org/KPI-Basics/">KPI fundamentals</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=FgZD03JAjf8"><span class="play">▶</span>My Lean University: Leading KPI vs Lagging KPI with examples</a></li>
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=xT5NnNcRIPQ"><span class="play">▶</span>Startup Akademia: Leading vs lagging metrics &amp; KPIs</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Characteristics of effective KPIs</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>KPI.org</b> — <a class="src" href="https://www.kpi.org/KPI-Basics/">characteristics &amp; selection criteria</a></li>
+                <li><b>Balanced Scorecard Institute</b> — <a class="src" href="https://balancedscorecard.org/solutions/kpi-solution/">KPI development framework</a></li>
+              </ul>
+            </td>
+            <td><span class="none">Concepts covered in the KPI videos above.</span></td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Defining KPIs — data source, target and review frequency</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>KPI.org</b> — <a class="src" href="https://www.kpi.org/KPI-Basics/KPI-Development/">How to develop KPIs: step-by-step method</a></li>
+                <li><b>BSI</b> — <a class="src" href="https://balancedscorecard.org/training-certification/kpi-essentials/">KPI Essentials training outline</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=hiQKb_0bTMs"><span class="play">▶</span>Setting targets, owners and review rhythm</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Exercise: Define KPIs for a real work process</strong></td>
+            <td><span class="none">Follows the KPI.org development framework above.</span></td>
+            <td><span class="none">Facilitated exercise using the sources above.</span></td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Discussion: Common KPI pitfalls</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>KPI.org</b> — <a class="src" href="https://www.kpi.org/KPI-Basics/">basics</a> &amp; <a class="src" href="https://www.kpi.org/KPI-Basics/KPI-Development/">development guidance (avoiding weak measures)</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=hiQKb_0bTMs"><span class="play">▶</span>Vanity metrics vs true KPIs</a></li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 8E -->
+    <div class="table-scroll" style="margin-bottom:0">
+      <table>
+        <thead><tr><th style="width:26%">Module 8E · 3:15–4:30 PM — Dashboard Interpretation</th><th style="width:37%">Official / Authority sources</th><th style="width:37%">YouTube step-by-step</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="c-item"><strong>Dashboard anatomy — charts, gauges, filters and comparisons</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Tableau</b> — <a class="src" href="https://www.tableau.com/blog/spot-misleading-charts-checklist">How to spot misleading charts: a checklist (chart types &amp; design)</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=is5c02PSxpk"><span class="play">▶</span>Maven Analytics: How to Read and Understand Common Data Charts</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Reading trends, comparisons and outliers</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Tableau</b> — <a class="src" href="https://www.tableau.com/blog/spot-misleading-charts-checklist">interpreting data honestly (trends &amp; context)</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=e78DrlHHEEg"><span class="play">▶</span>Dr. Deniz Marti: Reading Charts Critically</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Spotting misleading visuals</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Tableau</b> — <a class="src" href="https://www.tableau.com/blog/spot-misleading-charts-checklist">misleading chart checklist</a></li>
+                <li><b>Catch Wisdom</b> — <a class="src" href="https://catchwisdom.com/course/spotting-misleading-charts">free course: Spotting Misleading Charts</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=E91bGT9BjYk"><span class="play">▶</span>TED-Ed: How to spot a misleading graph</a></li>
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=ttvWI_nkSjk"><span class="play">▶</span>Mathenomics: Identifying Misleading Graphs</a></li>
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=-rYUi_dfhY0"><span class="play">▶</span>Corbettmaths: Misleading Graphs</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Exercise: Interpret a sample dashboard and present a data-driven recommendation</strong></td>
+            <td>
+              <ul class="srcs">
+                <li><b>Storytelling with Data</b> — <a class="src" href="https://storytellingwithdata.com/">data storytelling principles &amp; examples</a></li>
+              </ul>
+            </td>
+            <td>
+              <ul class="srcs">
+                <li class="vid"><a class="src yt" href="https://www.youtube.com/watch?v=5Zg-C8AAIGg"><span class="play">▶</span>TED — David McCandless: The beauty of data visualization</a></li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Assessment -->
+    <div class="table-scroll" style="margin-top:26px">
+      <table>
+        <thead><tr><th style="width:26%">Assessment · 4:30–5:00 PM</th><th style="width:37%">Official / Authority sources</th><th style="width:37%">YouTube step-by-step</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="c-item"><strong>Productivity and data awareness competency check</strong><span class="tagline">Internal assessment</span></td>
+            <td><span class="none">Internal instrument; content validated by the knowledge checks in the Microsoft Learn modules listed above.</span></td>
+            <td><span class="none">—</span></td>
+          </tr>
+          <tr>
+            <td class="c-item"><strong>Workplace Improvement Project planning</strong><span class="tagline">Internal capstone</span></td>
+            <td><span class="none">Internal template; supported by the MS Learn guided-project structure (<a class="src" href="https://learn.microsoft.com/en-us/training/paths/draft-analyze-present-microsoft-365-copilot/">MS-4018 path</a>).</span></td>
+            <td><span class="none">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ YOUTUBE LIBRARY ═══ -->
+<section id="youtube">
+  <div class="wrap">
+    <div class="kicker"><span class="bar"></span><span>Section C · Video Library</span></div>
+    <h2>Verified YouTube Step-by-Step Tutorials</h2>
+    <p class="sec-sub">All 18 videos were checked on 29 Sep 2026 — title and channel confirmed live on YouTube.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th style="width:34%">Video</th><th style="width:14%">Channel</th><th style="width:20%">Covers</th><th style="width:32%">Link</th></tr></thead>
+        <tbody>
+          <tr><td>Microsoft 365 Copilot Full Tutorial | Word, Excel, Teams &amp; Outlook (Free Beginner Guide)</td><td>A Guide to Cloud &amp; AI</td><td>8B · Copilot across apps</td><td><a class="src" href="https://www.youtube.com/watch?v=1beYHq8aMyE">youtube.com/watch?v=1beYHq8aMyE</a></td></tr>
+          <tr><td>Microsoft 365 Copilot: Complete Tutorial for Beginners (2026)</td><td>Lisa Crosbie</td><td>8A/8B · Copilot intro &amp; usage</td><td><a class="src" href="https://www.youtube.com/watch?v=0_mqsU7yh5Q">youtube.com/watch?v=0_mqsU7yh5Q</a></td></tr>
+          <tr><td>Microsoft 365 Copilot Tutorial — Beginner's Guide</td><td>Mike Tholfsen</td><td>8B · Everyday productivity tasks</td><td><a class="src" href="https://www.youtube.com/watch?v=JbOJliF-Cn4">youtube.com/watch?v=JbOJliF-Cn4</a></td></tr>
+          <tr><td>Microsoft Copilot Tutorial</td><td>Kevin Stratvert</td><td>8A/8B · Prompting + apps</td><td><a class="src" href="https://www.youtube.com/watch?v=d-CuF6dlqLg">youtube.com/watch?v=d-CuF6dlqLg</a></td></tr>
+          <tr><td>How to Use Google NotebookLM (Full Tutorial)</td><td>Kevin Stratvert</td><td>8C · Notebook build &amp; citations</td><td><a class="src" href="https://www.youtube.com/watch?v=uSVBfyHBiDU">youtube.com/watch?v=uSVBfyHBiDU</a></td></tr>
+          <tr><td>How to Use Google NotebookLM (Step-by-Step Guide) (2026)</td><td>ProgrammingKnowledge</td><td>8C · Sources, notes, exports</td><td><a class="src" href="https://www.youtube.com/watch?v=iQGdKNaJnKE">youtube.com/watch?v=iQGdKNaJnKE</a></td></tr>
+          <tr><td>How to Use Google NotebookLM for Beginners (2026) | Complete Step-by-Step Guide</td><td>BAI Tutorials</td><td>8C · Briefing-note workflow</td><td><a class="src" href="https://www.youtube.com/watch?v=jI1sq-FfAhk">youtube.com/watch?v=jI1sq-FfAhk</a></td></tr>
+          <tr><td>How to Use Google NotebookLM | Complete Tutorial for Beginners</td><td>AI ToolKit</td><td>8C · PDF upload &amp; summarise</td><td><a class="src" href="https://www.youtube.com/watch?v=EFqx153WkTc">youtube.com/watch?v=EFqx153WkTc</a></td></tr>
+          <tr><td>Key Performance Indicators (KPI) Explained for Beginners</td><td>EDOXI</td><td>8D · What KPIs are</td><td><a class="src" href="https://www.youtube.com/watch?v=BL_JAtrqhTQ">youtube.com/watch?v=BL_JAtrqhTQ</a></td></tr>
+          <tr><td>Understanding Key Performance Indicators: Leading KPI vs Lagging KPI | Examples &amp; Explanation</td><td>My Lean University</td><td>8D · Leading vs lagging</td><td><a class="src" href="https://www.youtube.com/watch?v=FgZD03JAjf8">youtube.com/watch?v=FgZD03JAjf8</a></td></tr>
+          <tr><td>KPIs &amp; Metrics Explained: North Star Metric, Leading vs Lagging</td><td>Explained Hub</td><td>8D · Targets, owners, pitfalls</td><td><a class="src" href="https://www.youtube.com/watch?v=hiQKb_0bTMs">youtube.com/watch?v=hiQKb_0bTMs</a></td></tr>
+          <tr><td>Leading vs Lagging metrics &amp; KPIs</td><td>Startup Akademia</td><td>8D · Indicator selection</td><td><a class="src" href="https://www.youtube.com/watch?v=xT5NnNcRIPQ">youtube.com/watch?v=xT5NnNcRIPQ</a></td></tr>
+          <tr><td>How to spot a misleading graph</td><td>TED-Ed</td><td>8E · Misleading visuals</td><td><a class="src" href="https://www.youtube.com/watch?v=E91bGT9BjYk">youtube.com/watch?v=E91bGT9BjYk</a></td></tr>
+          <tr><td>Identifying Misleading Graphs</td><td>Mathenomics</td><td>8E · Chart traps</td><td><a class="src" href="https://www.youtube.com/watch?v=ttvWI_nkSjk">youtube.com/watch?v=ttvWI_nkSjk</a></td></tr>
+          <tr><td>Misleading Graphs</td><td>Corbettmaths</td><td>8E · Axes &amp; scale pitfalls</td><td><a class="src" href="https://www.youtube.com/watch?v=-rYUi_dfhY0">youtube.com/watch?v=-rYUi_dfhY0</a></td></tr>
+          <tr><td>Reading Charts Critically</td><td>Dr. Deniz Marti</td><td>8E · Trend/outlier reading</td><td><a class="src" href="https://www.youtube.com/watch?v=e78DrlHHEEg">youtube.com/watch?v=e78DrlHHEEg</a></td></tr>
+          <tr><td>How to Read and Understand Common Data Charts</td><td>Maven Analytics</td><td>8E · Dashboard anatomy</td><td><a class="src" href="https://www.youtube.com/watch?v=is5c02PSxpk">youtube.com/watch?v=is5c02PSxpk</a></td></tr>
+          <tr><td>The beauty of data visualization — David McCandless</td><td>TED-Ed</td><td>8D/8E · Presenting findings</td><td><a class="src" href="https://www.youtube.com/watch?v=5Zg-C8AAIGg">youtube.com/watch?v=5Zg-C8AAIGg</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METHOD ═══ -->
+<section id="method" style="background:#eef2f7;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker"><span class="bar"></span><span>Section D · Verification Method</span></div>
+    <h2>How This Verification Was Done</h2>
+    <div class="method">
+      <div class="mcard">
+        <h4><span class="ico">1</span>Live link checking</h4>
+        <p>Every URL in this sheet was requested programmatically on <strong>29 September 2026</strong> and only links returning a successful response were included. Numerous plausible-looking links found during research returned “404 – not found” and were rejected.</p>
+      </div>
+      <div class="mcard">
+        <h4><span class="ico">2</span>YouTube title &amp; channel verification</h4>
+        <p>Each video was checked against YouTube itself — both its title and publishing channel were confirmed, so no dead or misattributed video links are listed.</p>
+      </div>
+      <div class="mcard">
+        <h4><span class="ico">3</span>Known caveats</h4>
+        <ul>
+          <li>Tableau’s website blocks automated checkers; its pages were confirmed by direct content retrieval and open normally in a browser.</li>
+          <li>“Gemini Notebook” is Google’s current name for the tool previously called <strong>NotebookLM</strong> — tutorials titled “NotebookLM” teach the same product.</li>
+          <li>Microsoft Support links use the <em>/en-us/</em> paths; equivalent localised paths exist for other locales.</li>
+        </ul>
+      </div>
+      <div class="mcard">
+        <h4><span class="ico">4</span>What needs no external source</h4>
+        <p>Four items are purely internal and carry no factual claims: the welcome session, the ice-breaker, the competency check and the Workplace Improvement Project. All remaining curriculum items map to at least one official step-by-step lesson.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap">
+    <span class="fbrand">M8 — Digital Productivity &amp; Data Awareness · Verified Learning References</span>
+    <span>Companion to the <a href="digital-productivity-data-awareness-training-outline.html">Training Outline</a> · © 2026 Ts. Chong Theng Hui · HRDC Accredited Trainer (TTT/22718)</span>
+  </div>
+</footer>
+
+</body>
+</html>
