@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-MY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="QCode AI Gateway monthly platform and per-user model fees in Malaysian ringgit.">
+  <title>Pricing | QCode AI Gateway</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, system-ui, sans-serif;
+      color: #f4f8ff;
+      background: #08111b;
+      --muted: #bdcddd;
+      --mint: #85f0d1;
+      --line: #304655;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 1100px; margin: 0 auto; padding: clamp(24px, 6vw, 72px) 24px; }
+    h1, h2, h3, p, dl, dd { margin: 0; }
+    .brand { color: var(--mint); font-size: 1rem; font-weight: 750; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.25rem); letter-spacing: -.055em; line-height: 1.06; margin-top: 10px; }
+    h2 { font-size: 1.45rem; margin-bottom: 14px; letter-spacing: -.025em; }
+    h3 { font-size: 1rem; }
+    .intro, .detail, dt { color: var(--muted); }
+    .intro { margin-top: 12px; line-height: 1.5; }
+    section { margin-top: 32px; }
+    .fees, .examples { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .fee, .example { padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: #101d2a; }
+    .fee:first-child { border-color: #558e86; background: #112a30; }
+    .price, .total dd { color: var(--mint); font-weight: 750; font-variant-numeric: tabular-nums; }
+    .price { font-size: 1.8rem; letter-spacing: -.04em; margin: 10px 0 6px; }
+    .unit { color: var(--muted); font-size: .8rem; font-weight: 550; letter-spacing: 0; }
+    .detail { font-size: .875rem; line-height: 1.5; }
+    .example h3 { font-size: 1.125rem; }
+    .example .detail { margin-top: 4px; }
+    dl { display: grid; gap: 8px; margin-top: 16px; font-size: .875rem; }
+    dl div { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+    dd { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .total { border-top: 1px solid var(--line); margin-top: 3px; padding-top: 10px; }
+    .total dd { font-size: 1.12rem; }
+    @media (max-width: 780px) {
+      .fees, .examples { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="brand">QCode AI Gateway</p>
+      <h1>Monthly pricing</h1>
+      <p class="intro">Pay one platform fee, then add a model option for each user.</p>
+    </header>
+
+    <section aria-labelledby="fees">
+      <h2 id="fees">Fees</h2>
+      <div class="fees">
+        <article class="fee">
+          <h3>QCode platform</h3>
+          <p class="price">RM299 <span class="unit">/ month</span></p>
+          <p class="detail">Includes up to 10 users. Each additional user is RM10 per month.</p>
+        </article>
+        <article class="fee">
+          <h3>QCode-selected open-weight models</h3>
+          <p class="price">RM59 <span class="unit">/ user / month</span></p>
+          <p class="detail">Use open-weight models selected by QCode.</p>
+        </article>
+        <article class="fee">
+          <h3>Bring Your Own Key (BYOK)</h3>
+          <p class="price">RM10 <span class="unit">/ user / month</span></p>
+          <p class="detail">Connect a model with your own provider API key.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="examples">
+      <h2 id="examples">Example monthly bills</h2>
+      <div class="examples">
+        <article class="example">
+          <h3>10 users</h3>
+          <p class="detail">All on QCode-selected models</p>
+          <dl>
+            <div><dt>Platform</dt><dd>RM299.00</dd></div>
+            <div><dt>10 × RM59 model fee</dt><dd>RM590.00</dd></div>
+            <div class="total"><dt>Monthly total</dt><dd>RM889.00</dd></div>
+          </dl>
+        </article>
+        <article class="example">
+          <h3>10 users</h3>
+          <p class="detail">5 on QCode-selected models, 5 on BYOK</p>
+          <dl>
+            <div><dt>Platform</dt><dd>RM299.00</dd></div>
+            <div><dt>5 × RM59 model fee</dt><dd>RM295.00</dd></div>
+            <div><dt>5 × RM10 BYOK fee</dt><dd>RM50.00</dd></div>
+            <div class="total"><dt>Monthly total</dt><dd>RM644.00</dd></div>
+          </dl>
+        </article>
+        <article class="example">
+          <h3>25 users</h3>
+          <p class="detail">All on QCode-selected models</p>
+          <dl>
+            <div><dt>Platform (RM299 + 15 × RM10)</dt><dd>RM449.00</dd></div>
+            <div><dt>25 × RM59 model fee</dt><dd>RM1,475.00</dd></div>
+            <div class="total"><dt>Monthly total</dt><dd>RM1,924.00</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
