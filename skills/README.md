@@ -32,3 +32,13 @@ Produce a broadcast-plausible Bahasa Malaysia radio imaging sequence — station
 
 **Install & instructions:** [`th-bahasa-malaysia-radio-sweeper-audio-maker/README.md`](th-bahasa-malaysia-radio-sweeper-audio-maker/README.md)
 
+### `th-prompt-smith`
+
+Turn a rough request into a precise, copy-paste-ready prompt for a coding or other AI agent — by asking the few clarifying questions that actually change the answer, then enriching with context, constraints, output contract and definition of done.
+
+**Download:** [`th-prompt-smith.zip`](th-prompt-smith.zip) ·
+**Browse:** [`th-prompt-smith/`](th-prompt-smith/) ·
+**Raw SKILL.md:** [`th-prompt-smith/SKILL.md`](th-prompt-smith/SKILL.md)
+
+**Install & instructions:** [`th-prompt-smith/README.md`](th-prompt-smith/README.md)
+

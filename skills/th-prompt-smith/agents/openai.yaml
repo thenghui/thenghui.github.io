@@ -1,0 +1,4 @@
+interface:
+  display_name: "TH Prompt Smith"
+  short_description: "Clarify a rough request, then deliver a copy-paste-ready enriched prompt"
+  default_prompt: "Use $th-prompt-smith to turn this rough request into a precise prompt: <request>"
