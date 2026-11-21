@@ -606,15 +606,15 @@ footer small { font-size: 12px; }
         <span class="tc-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
         </span>
-        <span class="tc-pill">1 Day · 7 Hours</span>
+        <span class="tc-pill">2 Days · 14 Hours</span>
       </div>
       <h3 class="tc-title"><a href="ai_dev/ai-based-development-training-outline.html">AI for Tech Teams</a></h3>
       <p class="tc-subtitle">Build, Test &amp; Improve Software with AI Coding Agents</p>
-      <p class="tc-desc">A hands-on programme for developers, QA, DevOps and IT teams across technology stacks — select coding agents, build features, write tests, review code and troubleshoot issues.</p>
+      <p class="tc-desc">A hands-on 2-day programme across technology stacks — understand projects, plan and build features, test, debug and refactor code, then complete a reviewed capstone and team adoption plan.</p>
       <div class="tc-tags">
         <span class="tc-tag">Codex · Claude Code · Antigravity</span>
         <span class="tc-tag">Any technology stack</span>
-        <span class="tc-tag">6 modules</span>
+        <span class="tc-tag">12 modules</span>
       </div>
       <div class="tc-card-foot">
         <a class="tc-btn" href="ai_dev/ai-based-development-training-outline.html" aria-label="View the AI for Tech Teams training outline">View outline
