@@ -608,16 +608,16 @@ footer small { font-size: 12px; }
         </span>
         <span class="tc-pill">1 Day · 7 Hours</span>
       </div>
-      <h3 class="tc-title"><a href="ai_dev/ai-based-development-training-outline.html">.NET Core Development with Claude Code</a></h3>
-      <p class="tc-subtitle">Accelerating .NET Core Development with Claude Code</p>
-      <p class="tc-desc">A focused programme for .NET Core teams — install and configure Claude Code, manage context, scaffold and refactor code, generate documentation and debug issues.</p>
+      <h3 class="tc-title"><a href="ai_dev/ai-based-development-training-outline.html">AI for Tech Teams</a></h3>
+      <p class="tc-subtitle">Build, Test &amp; Improve Software with AI Coding Agents</p>
+      <p class="tc-desc">A hands-on programme for developers, QA, DevOps and IT teams across technology stacks — select coding agents, build features, write tests, review code and troubleshoot issues.</p>
       <div class="tc-tags">
-        <span class="tc-tag">Claude Code</span>
-        <span class="tc-tag">.NET Core</span>
+        <span class="tc-tag">Codex · Claude Code · Antigravity</span>
+        <span class="tc-tag">Any technology stack</span>
         <span class="tc-tag">6 modules</span>
       </div>
       <div class="tc-card-foot">
-        <a class="tc-btn" href="ai_dev/ai-based-development-training-outline.html" aria-label="View the .NET Core Development with Claude Code training outline">View outline
+        <a class="tc-btn" href="ai_dev/ai-based-development-training-outline.html" aria-label="View the AI for Tech Teams training outline">View outline
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
