@@ -526,6 +526,28 @@ footer small { font-size: 12px; }
     <article class="tc-card tc-card--green">
       <div class="tc-card-top">
         <span class="tc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V3h14v18M9 7h1M14 7h1M9 11h1M14 11h1M10 21v-6h4v6"/></svg>
+        </span>
+        <span class="tc-pill">1 Day · 7 Hours</span>
+      </div>
+      <h3 class="tc-title"><a href="ai_office_productivity/ai-powered-property-management-training-outline.html">AI-Powered Property Management</a></h3>
+      <p class="tc-subtitle">Build Your Smart Virtual OM, BM &amp; BE Assistant</p>
+      <p class="tc-desc">A hands-on workshop for property management teams to configure reusable ChatGPT instructions and practise complaint handling, meeting minutes, notices, quotation comparisons, house-rule reference checks and security onboarding.</p>
+      <div class="tc-tags">
+        <span class="tc-tag">ChatGPT</span>
+        <span class="tc-tag">Property management</span>
+        <span class="tc-tag">6 modules</span>
+      </div>
+      <div class="tc-card-foot">
+        <a class="tc-btn" href="ai_office_productivity/ai-powered-property-management-training-outline.html" aria-label="View the AI-Powered Property Management training outline">View outline
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="tc-card tc-card--green">
+      <div class="tc-card-top">
+        <span class="tc-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="20" x2="6" y2="16"/><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/></svg>
         </span>
         <span class="tc-pill">1 Day · 7 Hours</span>
