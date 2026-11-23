@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Qinity × Stable Vision — AI Transformation &amp; Governance Proposal</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm;
+    }
+    :root {
+      --ink: #0f172a;
+      --muted: #475569;
+      --subtle: #64748b;
+      --line: #e2e8f0;
+      --surface: #f8fafc;
+      --accent: #0f766e;
+      --accent-bg: #f0fdfa;
+      --accent-line: #99f6e4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 8.6pt;
+      line-height: 1.38;
+      color: var(--ink);
+      background: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      width: 100%;
+      max-width: 186mm;
+      margin: 0 auto;
+    }
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--ink);
+      margin-bottom: 9px;
+    }
+    .eyebrow {
+      font-size: 7.4pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+    h1 {
+      font-size: 14.5pt;
+      font-weight: 750;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+    .meta {
+      text-align: right;
+      font-size: 7.6pt;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .meta strong { color: var(--ink); }
+
+    /* Lead */
+    .lead {
+      font-size: 8.4pt;
+      color: var(--muted);
+      margin-bottom: 9px;
+    }
+    .lead strong { color: var(--ink); }
+
+    /* Vision Strip */
+    .vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-bottom: 7px;
+    }
+    .vision-card {
+      border-left: 2.5px solid var(--accent);
+      background: var(--accent-bg);
+      padding: 5px 8px;
+      border-radius: 0 4px 4px 0;
+    }
+    .vision-title {
+      font-size: 7.5pt;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-bottom: 1px;
+    }
+    .vision-card p {
+      font-size: 7.5pt;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    /* Pillars */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-bottom: 9px;
+    }
+    .pillar {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 5px;
+      padding: 6px 8px;
+    }
+    .pillar-title {
+      font-size: 7.8pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .pillar p {
+      font-size: 7.4pt;
+      color: var(--muted);
+      line-height: 1.32;
+    }
+
+    /* Section */
+    section { margin-bottom: 9px; }
+    .sec-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    h2 {
+      font-size: 9.2pt;
+      font-weight: 750;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .sec-tag {
+      font-size: 7.3pt;
+      color: var(--subtle);
+      font-weight: 600;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+    }
+    th, td {
+      text-align: left;
+      padding: 4.5px 7px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+      font-size: 7.2pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+    .num {
+      text-align: right;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .bold { font-weight: 700; color: var(--ink); }
+    .muted { color: var(--muted); font-size: 7.5pt; }
+
+    /* Rate Comparison Strip */
+    .rate-strip {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr 1fr;
+      gap: 7px;
+      margin-bottom: 6px;
+    }
+    .rate-box {
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 5px 8px;
+      background: var(--surface);
+    }
+    .rate-box.highlight {
+      border-color: var(--accent-line);
+      background: var(--accent-bg);
+    }
+    .rate-label {
+      font-size: 6.9pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+    .rate-box.highlight .rate-label { color: var(--accent); }
+    .rate-val {
+      font-size: 11.5pt;
+      font-weight: 750;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+      margin-top: 1px;
+    }
+    .rate-box.highlight .rate-val { color: var(--accent); }
+    .rate-sub {
+      font-size: 7pt;
+      color: var(--muted);
+    }
+    .strike {
+      text-decoration: line-through;
+      color: var(--subtle);
+      font-weight: 500;
+    }
+
+    /* Callout notes */
+    .note-line {
+      font-size: 7.4pt;
+      color: var(--muted);
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+    .note-line strong { color: var(--ink); }
+
+    /* QCode compact box */
+    .qcode-box {
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 6px 9px;
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 10px;
+      font-size: 7.6pt;
+    }
+    .qcode-box ul {
+      list-style: none;
+      display: grid;
+      gap: 2px;
+    }
+    .qcode-box li strong { color: var(--ink); }
+
+    /* Footer / Signatures */
+    .footer-grid {
+      margin-top: 8px;
+      padding-top: 7px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      font-size: 7.5pt;
+    }
+    .sig-box {
+      display: grid;
+      gap: 12px;
+    }
+    .sig-title {
+      font-weight: 700;
+      font-size: 7.8pt;
+      color: var(--ink);
+    }
+    .sig-line {
+      border-bottom: 1px solid #cbd5e1;
+      height: 15px;
+    }
+    .sig-meta {
+      display: flex;
+      justify-content: space-between;
+      color: var(--subtle);
+      font-size: 7pt;
+    }
+    .terms-mini {
+      font-size: 7pt;
+      color: var(--subtle);
+      margin-top: 6px;
+      line-height: 1.32;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <div class="eyebrow">Qinity × Stable Vision · Executive Proposal</div>
+        <h1>AI Agency Transformation &amp; Governance</h1>
+      </div>
+      <div class="meta">
+        <div><strong>Prepared for:</strong> Richard &amp; SV Leadership</div>
+        <div><strong>Date:</strong> 23 November 2026 &nbsp;|&nbsp; <strong>Target Kickoff:</strong> Jan 2027</div>
+      </div>
+    </header>
+
+    <p class="lead">
+      Unlike generic AI prompting classes, this partnership pairs <strong>immediate agent upskilling and workshop revenue</strong> with a <strong>proprietary Stable Vision AI Brain</strong>—turning SV's collective wisdom into a recruitment moat, governed end-to-end by <strong>QCode AI Gateway</strong> (qcode.qinity.my).
+    </p>
+
+    <div class="vision">
+      <div class="vision-card">
+        <div class="vision-title">Business Development</div>
+        <p>Improve productivity in preparation, review, and rework activities.</p>
+      </div>
+      <div class="vision-card">
+        <div class="vision-title">Recruitment</div>
+        <p>New agent onboarding support system with AI that improves the grooming gap.</p>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-title">1. Model Routing</div>
+        <p>Unified access across BYO models, e.g. Claude, GPT, Gemini &amp; open-weight models so agents never stall on a single provider.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">2. Prompt Protection</div>
+        <p>Auto-masks Malaysian <strong>NRICs, phone numbers &amp; credentials</strong> before prompts reach external AI models.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">3. Agency-Wide Governance</div>
+        <p>B2B master console with per-agent keys, token/rate caps, usage audit &amp; 1-click offboarding.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="sec-head">
+        <h2>Track 1 · Training Collaboration</h2>
+        <span class="sec-tag">SV provides venue &amp; marketing · Batch target: 80–100 agents</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:27%">Programme</th>
+            <th style="width:20%" class="num">Fee / Share</th>
+            <th>Deliverable &amp; Strategic Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bold">Internal SV Agent Workshop<br><span class="muted">Up to 25 pax / day</span></td>
+            <td class="num bold">RM 13,000 / day</td>
+            <td>Hands-on insurance AI workflows + <strong>Month 1 QCode free</strong> for participants <em>(RM 1,924 value waived on QCode-selected models)</em>. Drives readiness before batch onboarding.</td>
+          </tr>
+          <tr>
+            <td class="bold">External Business Owner Workshop<br><span class="muted">Public / client-facing event</span></td>
+            <td class="num bold">Est. RM 899–1,699<br><span class="muted">/ pax / day · 10% sales to SV</span></td>
+            <td>SV hosts &amp; markets; <strong>10% of collected ticket sales</strong> go to SV. Positions SV as an AI-ready advisory agency and generates client &amp; recruitment leads.</td>
+          </tr>
+          <tr>
+            <td class="bold">FDE Referral Incentive</td>
+            <td class="num bold">5% per client<br><span class="muted">(one-time)</span></td>
+            <td>Referral fee paid to SV for any external workshop attendee who engages Qinity on a <strong>6-month+ FDE Retainer</strong>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <h2>Track 2 · Stable Vision AI Brain (6-Month FDE Retainer)</h2>
+        <span class="sec-tag">Forward Deployed Engineering · 45 MD Total Ceiling</span>
+      </div>
+
+      <div class="rate-strip">
+        <div class="rate-box">
+          <div class="rate-label">Standard FDE Rate</div>
+          <div class="rate-val"><span class="strike">RM 1,800</span> <span class="rate-sub">/ MD</span></div>
+          <div class="rate-sub">Original 6-mo fee: RM 81,000</div>
+        </div>
+        <div class="rate-box highlight">
+          <div class="rate-label">10% Pioneer Partner Rate</div>
+          <div class="rate-val">RM 1,620 <span class="rate-sub">/ MD</span></div>
+          <div class="rate-sub">Partner savings: RM 8,100 over 6 months</div>
+        </div>
+        <div class="rate-box highlight">
+          <div class="rate-label">6-Month Net Cap (45 MD)</div>
+          <div class="rate-val">RM 72,900</div>
+          <div class="rate-sub">Renewable subject to agreed scope</div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:24%">Phase &amp; Window</th>
+            <th style="width:14%" class="num">Effort Cap</th>
+            <th>Core Focus &amp; Outcomes</th>
+            <th style="width:18%" class="num">Monthly / Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="bold">Phase 1 · Months 1–3<br><span class="muted">QCode + Discovery with Proof of Concept &amp; MVP</span></td>
+            <td class="num bold">5 MD / mo<br><span class="muted">15 MD total</span></td>
+            <td>Onboard Batch 1 to QCode, enforce NRIC masking &amp; token caps; audit SV scripts, CI/medical/estate frameworks &amp; admin bottlenecks; lock Phase 2 Brain blueprint.</td>
+            <td class="num bold">RM 8,100 / mo<br><span class="muted">RM 24,300 total</span></td>
+          </tr>
+          <tr>
+            <td class="bold">Phase 2 · Months 4–6<br><span class="muted">AI Brain Pilot for Core Insurance Product Marketing &amp; Sales</span></td>
+            <td class="num bold">10 MD / mo<br><span class="muted">30 MD total</span></td>
+            <td>Build &amp; pilot SV's proprietary AI Brain from historical playbooks + weekly sharing; equip agents &amp; new recruits via QCode; evaluate ROI &amp; Phase 3 admin automation.</td>
+            <td class="num bold">RM 16,200 / mo<br><span class="muted">RM 48,600 total</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note-line">
+        <strong>OPEX Guardrails:</strong> Fixed monthly ceiling guarantees budget predictability while adapting monthly to evolving AI tools. Unused monthly MDs do not carry forward; urgent initiatives may <strong>advance MDs from future months</strong> or add top-up MDs (at standard RM 1,800/MD unless extended).
+      </p>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <h2>QCode AI Gateway · B2B Master Subscription (Month 2+)</h2>
+        <span class="sec-tag">Billed B2B to SV · SV manages agent seats &amp; internal billing</span>
+      </div>
+      <div class="qcode-box">
+        <ul>
+          <li><strong>Platform Fee:</strong> RM 299 / mo <em>(first 10 users)</em> + RM 10 / extra user / mo</li>
+          <li><strong>Model Access:</strong> RM 59 / user / mo <em>(QCode open-weight)</em> <strong>or</strong> RM 10 / user / mo <em>(BYOK)</em></li>
+          <li><strong>Governance:</strong> Single B2B invoice to SV; SV controls seat access &amp; NRIC masking.</li>
+        </ul>
+        <ul>
+          <li><strong>Month 1 (25 trainees):</strong> <strong>RM 0</strong> <em>(waived with RM 13k Internal Workshop)</em></li>
+          <li><strong>Month 2+ (25 users):</strong> <strong>RM 1,924 / mo</strong> <em>(open-weight)</em> · <strong>RM 699 / mo</strong> <em>(BYOK)</em></li>
+          <li><strong>Full Scale (80–100 users):</strong> <strong>RM 5,719–7,099 / mo</strong> <em>(open-weight)</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="terms-mini">
+      <strong>Next Step &amp; Commercial Notes:</strong> Confirm Batch 1 internal workshop date (Jan 2027) and SV Discovery Champion. Fees exclude applicable taxes (if any) and third-party BYOK API token charges. Formal service schedule and payment milestones issued upon acceptance.
+    </div>
+
+    <div class="footer-grid">
+      <div class="sig-box">
+        <div class="sig-title">Accepted for Stable Vision</div>
+        <div class="sig-line"></div>
+        <div class="sig-meta"><span>Name &amp; Designation</span><span>Date</span></div>
+      </div>
+      <div class="sig-box">
+        <div class="sig-title">Accepted for Qinity</div>
+        <div class="sig-line"></div>
+        <div class="sig-meta"><span>Name &amp; Designation</span><span>Date</span></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
