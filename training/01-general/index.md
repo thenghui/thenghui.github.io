@@ -623,6 +623,28 @@ footer small { font-size: 12px; }
       </div>
     </article>
 
+    <article class="tc-card tc-card--blue">
+      <div class="tc-card-top">
+        <span class="tc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+        </span>
+        <span class="tc-pill">4 Hours · Half Day</span>
+      </div>
+      <h3 class="tc-title"><a href="ai_dev/ai-at-work-training-outline.html">AI at Work</a></h3>
+      <p class="tc-subtitle">Practical AI for Data, Products and Engineering Teams</p>
+      <p class="tc-desc">A hands-on half-day programme — an AI tooling tour, vibecoding with an agent harness, AI-assisted coding and review, and non-text AI for images, audio, documents and screenshots.</p>
+      <div class="tc-tags">
+        <span class="tc-tag">ChatGPT · Claude · Gemini</span>
+        <span class="tc-tag">Google Antigravity</span>
+        <span class="tc-tag">6 modules · 3 labs</span>
+      </div>
+      <div class="tc-card-foot">
+        <a class="tc-btn" href="ai_dev/ai-at-work-training-outline.html" aria-label="View the AI at Work training outline">View outline
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </article>
+
   </div>
 </div>
 
